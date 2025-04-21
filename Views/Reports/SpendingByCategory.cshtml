@@ -1,0 +1,23 @@
+﻿@model IEnumerable<dynamic>
+@{
+    ViewData["Title"] = "Spending by Category";
+}
+
+<h2>Spending by Category</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Total Spent</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Category</td>
+                <td>$@item.Total</td>
+            </tr>
+        }
+    </tbody>
+</table>

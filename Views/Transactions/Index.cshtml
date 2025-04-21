@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Transaction>
+@{
+    ViewData["Title"] = "Transactions";
+}
+
+<h2>All Transactions</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Account</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var t in Model)
+        {
+            <tr>
+                <td>@t.Date.ToShortDateString()</td>
+                <td>$@t.Amount</td>
+                <td>@t.Category.Name</td>
+                <td>@t.Account.Name</td>
+                <td>@t.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
