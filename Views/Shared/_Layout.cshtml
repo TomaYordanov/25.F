@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using finalProject.Models
+@inject UserManager<ApplicationUser> UserManager
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -35,11 +40,15 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Reports" asp-action="SpendingByCategory">Reports</a>
                         </li>
                     </ul>
+                    @{
+                        var user = await UserManager.GetUserAsync(User);
+                    }
+
                     <ul class="navbar-nav">
-                        @if (User.Identity.IsAuthenticated)
+                        @if (User.Identity.IsAuthenticated && user != null)
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark">Hello, @User.Identity.Name!</a>
+                                <a class="nav-link text-dark">Hello, @user.Name!</a>
                             </li>
                             <li class="nav-item">
                                 <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" method="post">
