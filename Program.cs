@@ -19,7 +19,7 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => {
 .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddRazorPages();
-builder.Services.AddTransient<ExcelImportService>();
+builder.Services.AddTransient<SpreadsheetImportService>();
 
 var app = builder.Build();
 

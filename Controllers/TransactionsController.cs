@@ -12,16 +12,16 @@ namespace finalProject.Controllers
     public class TransactionsController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private readonly ExcelImportService _excelImportService;
+        private readonly SpreadsheetImportService _SpreadsheetImportService;
         private readonly UserManager<ApplicationUser> _userManager;
 
         public TransactionsController(
             ApplicationDbContext context,
-            ExcelImportService excelImportService,
+            SpreadsheetImportService SpreadsheetImportService,
             UserManager<ApplicationUser> userManager)
         {
             _context = context;
-            _excelImportService = excelImportService;
+            _SpreadsheetImportService = SpreadsheetImportService;
             _userManager = userManager;
         }
 
@@ -51,7 +51,7 @@ namespace finalProject.Controllers
             var userId = _userManager.GetUserId(User);
 
             using var stream = file.OpenReadStream();
-            await _excelImportService.ImportTransactionsAsync(stream, userId, defaultCategoryId: 1, defaultAccountId: 1);
+            await _SpreadsheetImportService.ImportTransactionsAsync(stream, userId, defaultCategoryId: 1, defaultAccountId: 1);
 
             TempData["Success"] = "Transactions imported successfully!";
             return RedirectToAction("Index");
