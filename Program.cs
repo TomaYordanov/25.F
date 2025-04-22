@@ -1,8 +1,8 @@
 using finalProject.Data;
 using finalProject.Models;
-using finalProject.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using finalProject.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,15 +12,14 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
-{
-    options.SignIn.RequireConfirmedAccount = false; 
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => {
+    options.SignIn.RequireConfirmedAccount = false;
 })
-.AddEntityFrameworkStores<ApplicationDbContext>()
-.AddDefaultTokenProviders();
+.AddRoles<IdentityRole>() 
+.AddEntityFrameworkStores<ApplicationDbContext>();
 
-builder.Services.AddTransient<SeedDataService>();
+builder.Services.AddRazorPages();
+builder.Services.AddTransient<ExcelImportService>();
 
 var app = builder.Build();
 
@@ -32,9 +31,6 @@ using (var scope = app.Services.CreateScope())
     {
         var context = services.GetRequiredService<ApplicationDbContext>();
         context.Database.Migrate();
-
-        var seeder = services.GetRequiredService<SeedDataService>();
-        seeder.SeedAsync().Wait();
     }
     catch (Exception ex)
     {
@@ -51,12 +47,16 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 
 app.UseRouting();
 
+app.MapRazorPages();
+
 app.UseAuthentication();
 app.UseAuthorization();
+
 
 app.MapControllerRoute(
     name: "default",

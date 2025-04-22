@@ -13,8 +13,7 @@ namespace finalProject.Models
         public decimal Amount { get; set; }
 
         [Required]
-        [DataType(DataType.Date)]
-        public DateTime Date { get; set; }
+        public DateTime TransactionDateTime { get; set; }
 
         [MinLength(2)]
         [MaxLength(200)]
