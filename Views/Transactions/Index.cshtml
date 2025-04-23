@@ -1,4 +1,4 @@
-﻿@model IEnumerable<finalProject.Models.Transaction>
+﻿@model finalProject.ViewModels.TransactionIndexViewModel
 
 @{
     ViewData["Title"] = "Transactions";
@@ -23,7 +23,11 @@
     <button type="submit" class="btn btn-primary mt-2">Import Transactions</button>
 </form>
 
-<table class="table mt-4">
+<div class="mt-4">
+    <h5>Total Balance: <span class="text-success">@Model.TotalBalance.ToString("C")</span></h5>
+</div>
+
+<table class="table mt-3">
     <thead>
         <tr>
             <th>Date</th>
@@ -34,13 +38,13 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var t in Model)
+        @foreach (var t in Model.Transactions)
         {
             <tr>
                 <td>@t.TransactionDateTime.ToShortDateString()</td>
                 <td>@t.Amount.ToString("C")</td>
-                <td>@t.Category?.Name</td>
-                <td>@t.Account?.Name</td>
+                <td>@t.CategoryName</td>
+                <td>@t.AccountName</td>
                 <td>@t.Description</td>
             </tr>
         }
