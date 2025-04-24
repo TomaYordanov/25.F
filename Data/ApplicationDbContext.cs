@@ -1,6 +1,7 @@
 ﻿using finalProject.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace finalProject.Data
 {
@@ -20,11 +21,18 @@ namespace finalProject.Data
         {
             base.OnModelCreating(builder);
 
+             builder.Entity<Transaction>()
+            .HasOne(t => t.Account)
+            .WithMany(a => a.Transactions)
+            .HasForeignKey(t => t.AccountId)
+            .OnDelete(DeleteBehavior.Cascade);
+
             builder.Entity<Transaction>()
                 .HasOne(t => t.User)
                 .WithMany(u => u.Transactions)
                 .HasForeignKey(t => t.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
+
 
             builder.Entity<Transaction>()
                 .HasOne(t => t.Category)

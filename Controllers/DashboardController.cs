@@ -21,16 +21,29 @@ namespace finalProject.Controllers
 
         public IActionResult Index()
         {
-            var totalSpent = _context.Transactions.Sum(t => t.Amount);
-            var transactionCount = _context.Transactions.Count();
+            var userId = _userManager.GetUserId(User);
+
+            var totalSpent = _context.Transactions
+                .Where(t => t.UserId == userId && t.Amount < 0)
+                .Sum(t => t.Amount);
+
+            var transactionCount = _context.Transactions.Count(t => t.UserId == userId);
             var categoryCount = _context.Categories.Count();
 
-            ViewBag.TotalSpent = totalSpent;
+            ViewBag.TotalSpent = Math.Abs(totalSpent);
             ViewBag.TransactionCount = transactionCount;
             ViewBag.CategoryCount = categoryCount;
 
-            return View(new DashboardViewModel());
+            var accounts = _context.Accounts
+                .Where(a => a.UserId == userId)
+                .ToList();
+
+            return View(new DashboardViewModel
+            {
+                Accounts = accounts
+            });
         }
+
 
         [HttpPost]
         public async Task<IActionResult> AddAccount(DashboardViewModel model)
@@ -70,6 +83,26 @@ namespace finalProject.Controllers
             await _context.SaveChangesAsync();
 
             TempData["Success"] = "Account created successfully!";
+            return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public async Task<IActionResult> DeleteAccount(int accountId)
+        {
+            var userId = _userManager.GetUserId(User);
+
+            var account = _context.Accounts
+                .FirstOrDefault(a => a.Id == accountId && a.UserId == userId);
+
+            if (account == null)
+            {
+                TempData["Error"] = "Account not found.";
+                return RedirectToAction("Index");
+            }
+
+            _context.Accounts.Remove(account);
+            await _context.SaveChangesAsync();
+
+            TempData["Success"] = "Account deleted.";
             return RedirectToAction("Index");
         }
 

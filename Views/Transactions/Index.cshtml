@@ -1,5 +1,7 @@
 ﻿@model finalProject.ViewModels.TransactionIndexViewModel
 
+
+
 @{
     ViewData["Title"] = "Transactions";
 }
@@ -63,7 +65,7 @@
 <hr />
 
 <div class="mt-4">
-    <h5>Total Balance: <span class="text-success">@Model.TotalBalance.ToString("C")</span></h5>
+    <h5>Total Balance: <span class="text-success">@Html.DisplayFor(_ => Model.TotalBalance, "Currency")</span></h5>
 </div>
 
 <!-- Transactions Table -->
@@ -82,7 +84,7 @@
         {
             <tr>
                 <td>@t.TransactionDateTime.ToShortDateString()</td>
-                <td>@t.Amount.ToString("C")</td>
+                <td>@Html.DisplayFor(_ => t.Amount, "Currency")</td>
                 <td>@t.CategoryName</td>
                 <td>@t.AccountName</td>
                 <td>@t.Description</td>
@@ -90,3 +92,4 @@
         }
     </tbody>
 </table>
+

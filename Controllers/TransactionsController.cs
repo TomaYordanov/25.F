@@ -126,11 +126,15 @@ namespace finalProject.Controllers
 
             var defaultCategory = await _context.Categories.FirstOrDefaultAsync(); // Category can still be auto-created later
 
+       
+
             if (defaultCategory == null)
             {
-                TempData["Error"] = "Please manually add a category or include one in your Excel file.";
-                return RedirectToAction("Index");
+                defaultCategory = new Category { Name = "Miscellaneous" };
+                _context.Categories.Add(defaultCategory);
+                await _context.SaveChangesAsync();
             }
+
 
             using var stream = file.OpenReadStream();
             await _SpreadsheetImportService.ImportTransactionsAsync(

@@ -33,3 +33,30 @@
     </div>
     <button type="submit" class="btn btn-primary mt-2">Create Account</button>
 </form>
+<hr />
+
+<h4>Your Accounts</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Balance</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var account in Model.Accounts)
+        {
+            <tr>
+                <td>@account.Name</td>
+                <td>@account.Balance.ToString("C")</td>
+                <td>
+                    <form asp-action="DeleteAccount" method="post">
+                        <input type="hidden" name="accountId" value="@account.Id" />
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -3,6 +3,8 @@ using finalProject.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using finalProject.Services;
+using System.Globalization;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +24,11 @@ builder.Services.AddRazorPages();
 builder.Services.AddTransient<SpreadsheetImportService>();
 
 var app = builder.Build();
+
+var cultureInfo = new CultureInfo("en-US");
+CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+
 
 
 using (var scope = app.Services.CreateScope())

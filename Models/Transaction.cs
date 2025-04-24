@@ -28,6 +28,7 @@ namespace finalProject.Models
         public ApplicationUser User { get; set; }
 
         [Required]
+        [ForeignKey("Account")]
         public int AccountId { get; set; }
         public Account Account { get; set; }
     }

@@ -1,9 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using finalProject.Models;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace finalProject.ViewModels
 {
     public class DashboardViewModel
     {
+        public List<Account> Accounts { get; set; } = new();
+
         [Required]
         [Display(Name = "Account Name")]
         public string NewAccountName { get; set; }

@@ -1,5 +1,6 @@
 ﻿using finalProject.Data;
 using finalProject.Models;
+using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml;
 using System.Globalization;
 
@@ -44,12 +45,19 @@ namespace finalProject.Services
                     continue;
                 }
 
-                
+
                 decimal amount = 0;
                 if (!string.IsNullOrWhiteSpace(paymentsStr))
+                {
                     decimal.TryParse(paymentsStr, NumberStyles.Any, CultureInfo.InvariantCulture, out amount);
+                    amount = -Math.Abs(amount); // Ensure it's negative
+                }
                 else if (!string.IsNullOrWhiteSpace(proceedsStr))
+                {
                     decimal.TryParse(proceedsStr, NumberStyles.Any, CultureInfo.InvariantCulture, out amount);
+                    amount = Math.Abs(amount); // Ensure it's positive
+                }
+
 
                 if (amount == 0)
                     continue;
@@ -74,6 +82,16 @@ namespace finalProject.Services
                 };
 
                 _context.Transactions.Add(transaction);
+            }
+    
+            var accountsToUpdate = _context.Accounts
+                .Where(a => a.UserId == userId)
+                .Include(a => a.Transactions)
+                .ToList();
+
+            foreach (var account in accountsToUpdate)
+            {
+                account.Balance = account.Transactions.Sum(t => t.Amount);
             }
 
             await _context.SaveChangesAsync();
