@@ -15,6 +15,7 @@
     <div class="alert alert-danger">@TempData["Error"]</div>
 }
 
+<!-- Excel Upload Form -->
 <form asp-action="Import" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label>Select Excel File</label>
@@ -23,10 +24,49 @@
     <button type="submit" class="btn btn-primary mt-2">Import Transactions</button>
 </form>
 
+<hr />
+
+<!-- Manual Entry Form -->
+<h4>Add Transaction Manually</h4>
+<form asp-action="ManualAdd" method="post">
+    <div class="row">
+        <div class="col-md-2">
+            <label asp-for="ManualDateTime"></label>
+            <input asp-for="ManualDateTime" class="form-control" type="datetime-local" />
+        </div>
+        <div class="col-md-2">
+            <label asp-for="ManualAmount"></label>
+            <input asp-for="ManualAmount" class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <label asp-for="ManualDescription"></label>
+            <input asp-for="ManualDescription" class="form-control" />
+        </div>
+        <div class="col-md-2">
+            <label asp-for="SelectedCategoryId"></label>
+            <select asp-for="SelectedCategoryId" class="form-control" asp-items="@(new SelectList(Model.Categories, "Id", "Name"))">
+                <option value="">-- Select Category --</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label asp-for="SelectedAccountId"></label>
+            <select asp-for="SelectedAccountId" class="form-control" asp-items="@(new SelectList(Model.Accounts, "Id", "Name"))">
+                <option value="">-- Select Account --</option>
+            </select>
+        </div>
+        <div class="col-md-1 d-flex align-items-end">
+            <button type="submit" class="btn btn-success">Add</button>
+        </div>
+    </div>
+</form>
+
+<hr />
+
 <div class="mt-4">
     <h5>Total Balance: <span class="text-success">@Model.TotalBalance.ToString("C")</span></h5>
 </div>
 
+<!-- Transactions Table -->
 <table class="table mt-3">
     <thead>
         <tr>

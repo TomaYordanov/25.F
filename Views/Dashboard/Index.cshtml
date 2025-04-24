@@ -1,8 +1,35 @@
-﻿@{
+﻿@model finalProject.ViewModels.DashboardViewModel
+
+@{
     ViewData["Title"] = "Dashboard";
 }
 
 <h2>Dashboard</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
 <p><strong>Total Spent:</strong> $@ViewBag.TotalSpent</p>
 <p><strong>Total Transactions:</strong> @ViewBag.TransactionCount</p>
 <p><strong>Categories:</strong> @ViewBag.CategoryCount</p>
+
+<hr />
+
+<h4>Add New Account</h4>
+<form asp-action="AddAccount" method="post">
+    <div class="form-group">
+        <label asp-for="NewAccountName">Account Name</label>
+        <input asp-for="NewAccountName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="NewAccountBalance">Initial Balance</label>
+        <input asp-for="NewAccountBalance" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Create Account</button>
+</form>
