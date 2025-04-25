@@ -15,9 +15,36 @@
     <div class="alert alert-danger">@TempData["Error"]</div>
 }
 
-<p><strong>Total Spent:</strong> $@ViewBag.TotalSpent</p>
-<p><strong>Total Transactions:</strong> @ViewBag.TransactionCount</p>
-<p><strong>Categories:</strong> @ViewBag.CategoryCount</p>
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Balance:</h5>
+                <p class="card-text">
+                    <span class="text-success">
+                        @Html.DisplayFor(_ => Model.TotalBalance, "Currency")
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Transactions</h5>
+                <p class="card-text">@ViewBag.TransactionCount</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-info mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Categories</h5>
+                <p class="card-text">@ViewBag.CategoryCount</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <hr />
 
@@ -26,37 +53,49 @@
     <div class="form-group">
         <label asp-for="NewAccountName">Account Name</label>
         <input asp-for="NewAccountName" class="form-control" />
+        <span asp-validation-for="NewAccountName" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="NewAccountBalance">Initial Balance</label>
         <input asp-for="NewAccountBalance" class="form-control" />
+        <span asp-validation-for="NewAccountBalance" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-primary mt-2">Create Account</button>
 </form>
+
 <hr />
 
 <h4>Your Accounts</h4>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Balance</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var account in Model.Accounts)
-        {
+@if (Model.Accounts != null && Model.Accounts.Any())
+{
+    <table class="table table-striped">
+        <thead>
             <tr>
-                <td>@account.Name</td>
-                <td>@account.Balance.ToString("C")</td>
-                <td>
-                    <form asp-action="DeleteAccount" method="post">
-                        <input type="hidden" name="accountId" value="@account.Id" />
-                        <button class="btn btn-danger btn-sm">Delete</button>
-                    </form>
-                </td>
+                <th>Name</th>
+                <th>Balance</th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var account in Model.Accounts)
+            {
+                <tr>
+                    <td>@account.Name</td>
+                    <td>
+                        <span class="text-success">@account.Balance.ToString("C")</span>
+                    </td>
+                    <td>
+                        <form asp-action="DeleteAccount" method="post">
+                            <input type="hidden" name="accountId" value="@account.Id" />
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No accounts found.</p>
+}

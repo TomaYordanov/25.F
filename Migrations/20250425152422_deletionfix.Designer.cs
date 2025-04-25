@@ -12,8 +12,8 @@ using finalProject.Data;
 namespace finalProject.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250424193303_migration123")]
-    partial class migration123
+    [Migration("20250425152422_deletionfix")]
+    partial class deletionfix
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -387,7 +387,7 @@ namespace finalProject.Migrations
                     b.HasOne("finalProject.Models.Account", "Account")
                         .WithMany("Transactions")
                         .HasForeignKey("AccountId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("finalProject.Models.Category", "Category")

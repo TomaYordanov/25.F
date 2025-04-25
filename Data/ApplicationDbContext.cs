@@ -40,12 +40,6 @@ namespace finalProject.Data
                 .HasForeignKey(t => t.CategoryId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder.Entity<Transaction>()
-                .HasOne(t => t.Account)
-                .WithMany(a => a.Transactions)
-                .HasForeignKey(t => t.AccountId)
-                .OnDelete(DeleteBehavior.Restrict);
-
             builder.Entity<Account>()
                 .HasOne(a => a.User)
                 .WithMany(u => u.Accounts)

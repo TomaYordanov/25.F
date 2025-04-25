@@ -4,6 +4,7 @@ using finalProject.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace finalProject.Controllers
 {
@@ -19,28 +20,54 @@ namespace finalProject.Controllers
             _userManager = userManager;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             var userId = _userManager.GetUserId(User);
 
-            var totalSpent = _context.Transactions
-                .Where(t => t.UserId == userId && t.Amount < 0)
+
+            var transactions = await _context.Transactions
+                .Where(t => t.UserId == userId)
+                .ToListAsync();
+
+            var totalSpent = transactions
+                .Where(t => t.Amount < 0)
                 .Sum(t => t.Amount);
 
-            var transactionCount = _context.Transactions.Count(t => t.UserId == userId);
-            var categoryCount = _context.Categories.Count();
+            var transactionCount = transactions.Count;
+            var categoryCount = await _context.Categories.CountAsync();
 
+            var accounts = await _context.Accounts
+                .Where(a => a.UserId == userId)
+                .ToListAsync();
+
+            var totalBalance = accounts.Sum(a => a.Balance);
+
+            // Create a default account if none exist
+            if (!accounts.Any())
+            {
+                var defaultAccount = new Account
+                {
+                    Name = "Default Account",
+                    Balance = 0,
+                    UserId = userId
+                };
+
+                _context.Accounts.Add(defaultAccount);
+                await _context.SaveChangesAsync();
+
+                accounts = await _context.Accounts
+                    .Where(a => a.UserId == userId)
+                    .ToListAsync();
+            }
+                               
             ViewBag.TotalSpent = Math.Abs(totalSpent);
             ViewBag.TransactionCount = transactionCount;
             ViewBag.CategoryCount = categoryCount;
 
-            var accounts = _context.Accounts
-                .Where(a => a.UserId == userId)
-                .ToList();
-
             return View(new DashboardViewModel
             {
-                Accounts = accounts
+                Accounts = accounts,
+                TotalBalance = totalBalance
             });
         }
 
@@ -56,15 +83,15 @@ namespace finalProject.Controllers
 
             var userId = _userManager.GetUserId(User);
 
-            var totalProceeds = _context.Transactions
+            var totalProceeds = await _context.Transactions
                 .Where(t => t.UserId == userId && t.Amount > 0)
-                .Sum(t => t.Amount);
+                .SumAsync(t => t.Amount);
 
-            var totalPayments = _context.Transactions
+            var totalPayments = await _context.Transactions
                 .Where(t => t.UserId == userId && t.Amount < 0)
-                .Sum(t => t.Amount);
+                .SumAsync(t => t.Amount);
 
-            var availableBalance = totalProceeds + totalPayments; 
+            var availableBalance = totalProceeds + totalPayments;
 
             if (model.NewAccountBalance > availableBalance)
             {
@@ -85,13 +112,14 @@ namespace finalProject.Controllers
             TempData["Success"] = "Account created successfully!";
             return RedirectToAction("Index");
         }
+
         [HttpPost]
         public async Task<IActionResult> DeleteAccount(int accountId)
         {
             var userId = _userManager.GetUserId(User);
 
-            var account = _context.Accounts
-                .FirstOrDefault(a => a.Id == accountId && a.UserId == userId);
+            var account = await _context.Accounts
+                .FirstOrDefaultAsync(a => a.Id == accountId && a.UserId == userId);
 
             if (account == null)
             {
@@ -105,6 +133,5 @@ namespace finalProject.Controllers
             TempData["Success"] = "Account deleted.";
             return RedirectToAction("Index");
         }
-
     }
 }
