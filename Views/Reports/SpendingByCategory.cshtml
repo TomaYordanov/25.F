@@ -1,23 +1,52 @@
 ﻿@model IEnumerable<dynamic>
 @{
     ViewData["Title"] = "Spending by Category";
+    var selectedMonth = Context.Request.Query["month"].ToString();
 }
 
-<h2>Spending by Category</h2>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Category</th>
-            <th>Total Spent</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.Category</td>
-                <td>$@item.Total</td>
-            </tr>
+<h2>
+    Spending by Category
+    @if (!string.IsNullOrEmpty(selectedMonth) && selectedMonth != "All")
+    {
+        var selectedMonthName = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(int.Parse(selectedMonth));
+        <text> - @selectedMonthName</text>
+    }
+</h2>
+
+<form method="get" asp-controller="Reports" asp-action="SpendingByCategory" class="form-inline mb-3">
+    <label for="month" class="form-label me-2">Select Month:</label>
+    <select name="month" id="month" class="form-select me-2" onchange="this.form.submit()">
+        @{
+            var isAllSelected = string.IsNullOrEmpty(selectedMonth) || selectedMonth == "All";
         }
-    </tbody>
-</table>
+        <option value="All" selected="@isAllSelected">All Time</option>
+        @for (int m = 1; m <= 12; m++)
+        {
+            var monthName = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(m);
+            var isSelected = selectedMonth == m.ToString();
+            <option value="@m" selected="@isSelected">@monthName</option>
+        }
+    </select>
+</form>
+
+<div class="card">
+    <div class="card-body">
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Category</th>
+                    <th>Total Spent</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Category</td>
+                        <td><span class="text-danger">@((decimal)item.Total)</span></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -82,7 +82,7 @@
                 <tr>
                     <td>@account.Name</td>
                     <td>
-                        <span class="text-success">@account.Balance.ToString("C")</span>
+                        <span class="text-success"> @Html.DisplayFor(_ => account.Balance, "Currency")</span>
                     </td>
                     <td>
                         <form asp-action="DeleteAccount" method="post">

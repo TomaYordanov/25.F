@@ -1,5 +1,7 @@
 ﻿using finalProject.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 
 namespace finalProject.Controllers
 {
@@ -12,9 +14,21 @@ namespace finalProject.Controllers
             _context = context;
         }
 
-        public IActionResult SpendingByCategory()
+        public IActionResult SpendingByCategory(string month = "All")
         {
-            var data = _context.Transactions
+            var transactions = _context.Transactions
+                .Include(t => t.Category)
+                .AsQueryable();
+
+            if (int.TryParse(month, out int monthNumber) && monthNumber >= 1 && monthNumber <= 12)
+            {
+                transactions = transactions
+                    .Where(t => t.TransactionDateTime.Month == monthNumber);
+            }
+
+           
+            var data = transactions
+                .Where(t => t.Amount < 0)
                 .GroupBy(t => t.Category.Name)
                 .Select(g => new
                 {
@@ -25,5 +39,4 @@ namespace finalProject.Controllers
             return View(data);
         }
     }
-
 }

@@ -124,7 +124,7 @@ namespace finalProject.Controllers
                 await _context.SaveChangesAsync();
             }
 
-            var defaultCategory = await _context.Categories.FirstOrDefaultAsync(); // Category can still be auto-created later
+            var defaultCategory = await _context.Categories.FirstOrDefaultAsync(); 
 
        
 

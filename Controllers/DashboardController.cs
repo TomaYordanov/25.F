@@ -47,7 +47,7 @@ namespace finalProject.Controllers
             {
                 var defaultAccount = new Account
                 {
-                    Name = "Default Account",
+                    Name = "Main",
                     Balance = 0,
                     UserId = userId
                 };
@@ -118,12 +118,18 @@ namespace finalProject.Controllers
         {
             var userId = _userManager.GetUserId(User);
 
-            var account = await _context.Accounts
-                .FirstOrDefaultAsync(a => a.Id == accountId && a.UserId == userId);
+            var account = _context.Accounts
+                .FirstOrDefault(a => a.Id == accountId && a.UserId == userId);
 
             if (account == null)
             {
                 TempData["Error"] = "Account not found.";
+                return RedirectToAction("Index");
+            }
+
+            if (account.Name == "Main")
+            {
+                TempData["Error"] = "You cannot delete the default account.";
                 return RedirectToAction("Index");
             }
 
@@ -133,5 +139,6 @@ namespace finalProject.Controllers
             TempData["Success"] = "Account deleted.";
             return RedirectToAction("Index");
         }
+
     }
 }
