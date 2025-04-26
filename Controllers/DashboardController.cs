@@ -88,62 +88,79 @@ namespace finalProject.Controllers
 
             var userId = _userManager.GetUserId(User);
 
-            var totalProceeds = await _context.Transactions
-                .Where(t => t.UserId == userId && t.Amount > 0)
-                .SumAsync(t => t.Amount);
+            var mainAccount = await _context.Accounts
+                .FirstOrDefaultAsync(a => a.UserId == userId && a.Name == "Main");
 
-            var totalPayments = await _context.Transactions
-                .Where(t => t.UserId == userId && t.Amount < 0)
-                .SumAsync(t => t.Amount);
-
-            var availableBalance = totalProceeds + totalPayments;
-
-            if (model.NewAccountBalance > availableBalance)
+            if (mainAccount == null)
             {
-                TempData["Error"] = "You cannot assign more balance than you currently have.";
+                TempData["Error"] = "Main account not found.";
                 return RedirectToAction("Index");
             }
 
-            var account = new Account
+            if (model.NewAccountBalance > mainAccount.Balance)
+            {
+                TempData["Error"] = "You do not have enough funds in the Main account.";
+                return RedirectToAction("Index");
+            }
+
+            // Create new account
+            var newAccount = new Account
             {
                 Name = model.NewAccountName.Trim(),
                 Balance = model.NewAccountBalance,
                 UserId = userId
             };
 
-            _context.Accounts.Add(account);
+            
+            mainAccount.Balance -= model.NewAccountBalance;
+
+            _context.Accounts.Add(newAccount);
             await _context.SaveChangesAsync();
 
             TempData["Success"] = "Account created successfully!";
             return RedirectToAction("Index");
         }
 
+
         [HttpPost]
         public async Task<IActionResult> DeleteAccount(int accountId)
         {
             var userId = _userManager.GetUserId(User);
 
-            var account = _context.Accounts
-                .FirstOrDefault(a => a.Id == accountId && a.UserId == userId);
+            var accountToDelete = await _context.Accounts
+                .FirstOrDefaultAsync(a => a.Id == accountId && a.UserId == userId);
 
-            if (account == null)
+            if (accountToDelete == null)
             {
                 TempData["Error"] = "Account not found.";
                 return RedirectToAction("Index");
             }
 
-            if (account.Name == "Main")
+            if (accountToDelete.Name == "Main")
             {
-                TempData["Error"] = "You cannot delete the default account.";
+                TempData["Error"] = "You cannot delete the default Main account.";
                 return RedirectToAction("Index");
             }
 
-            _context.Accounts.Remove(account);
+            var mainAccount = await _context.Accounts
+                .FirstOrDefaultAsync(a => a.UserId == userId && a.Name == "Main");
+
+            if (mainAccount == null)
+            {
+                TempData["Error"] = "Main account not found.";
+                return RedirectToAction("Index");
+            }
+
+            // Transfer account balance back to Main
+            mainAccount.Balance += accountToDelete.Balance;
+
+            _context.Accounts.Remove(accountToDelete);
             await _context.SaveChangesAsync();
 
-            TempData["Success"] = "Account deleted.";
+            TempData["Success"] = "Account deleted successfully and balance moved to Main.";
             return RedirectToAction("Index");
         }
+
 
     }
 }

@@ -1,7 +1,5 @@
 ﻿@model finalProject.ViewModels.TransactionIndexViewModel
 
-
-
 @{
     ViewData["Title"] = "Transactions";
 }
@@ -82,12 +80,14 @@
             <th>Category</th>
             <th>Account</th>
             <th>Description</th>
-            <th>Actions</th> 
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var t in Model.Transactions)
         {
+            var collapseId = $"collapseMoveForm_{t.Id}";
+
             <tr>
                 <td>@t.TransactionDateTime.ToShortDateString()</td>
                 <td>@Html.DisplayFor(_ => t.Amount, "Currency")</td>
@@ -95,13 +95,59 @@
                 <td>@t.AccountName</td>
                 <td>@t.Description</td>
                 <td>
-                    <form asp-action="Delete" method="post" asp-route-id="@t.Id" onsubmit="return confirm('Are you sure you want to delete this transaction?');">
+                    <!-- Delete Form -->
+                    <form asp-action="Delete" method="post" asp-route-id="@t.Id" onsubmit="return confirm('Are you sure you want to delete this transaction?');" style="display:inline-block; margin-bottom:5px;">
                         <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                     </form>
+
+                    <!-- Toggle Move Form Button -->
+                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#@collapseId" aria-expanded="false" aria-controls="@collapseId" style="margin-top:5px;">
+                        Move
+                    </button>
+
+                    <!-- Collapsible Move Form -->
+                    <div class="collapse mt-2" id="@collapseId">
+                        <form asp-action="MoveTransaction" method="post">
+                            <input type="hidden" name="TransactionId" value="@t.Id" />
+                            <div class="form-group">
+                                <select name="NewAccountId" class="form-control form-control-sm mb-1">
+                                    <option value="">-- Select New Account --</option>
+                                    @foreach (var account in Model.Accounts)
+                                    {
+                                        <option value="@account.Id">@account.Name</option>
+                                    }
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-sm">Confirm Move</button>
+                        </form>
+                    </div>
+                    <!-- Toggle Transfer Form Button -->
+                    <button class="btn btn-warning btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#transferCollapse_@t.Id" aria-expanded="false" aria-controls="transferCollapse_@t.Id" style="margin-top:5px;">
+                        Transfer
+                    </button>
+
+                    <!-- Collapsible Transfer Form -->
+                    <div class="collapse mt-2" id="transferCollapse_@t.Id">
+                        <form asp-action="TransferTransaction" method="post">
+                            <input type="hidden" name="TransactionId" value="@t.Id" />
+                            <div class="form-group mb-1">
+                                <input type="number" step="0.01" name="TransferAmount" class="form-control form-control-sm" placeholder="Amount to Transfer" required />
+                            </div>
+                            <div class="form-group mb-1">
+                                <select name="TargetAccountId" class="form-control form-control-sm">
+                                    <option value="">-- Select Target Account --</option>
+                                    @foreach (var account in Model.Accounts)
+                                    {
+                                        <option value="@account.Id">@account.Name</option>
+                                    }
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-sm">Confirm Transfer</button>
+                        </form>
+                    </div>
+
                 </td>
             </tr>
         }
     </tbody>
 </table>
-
-

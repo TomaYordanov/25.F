@@ -38,7 +38,7 @@ namespace finalProject.Controllers
 
             var transactionVMs = transactions.Select(t => new TransactionViewModel
             {
-                Id = t.Id, 
+                Id = t.Id,
                 TransactionDateTime = t.TransactionDateTime,
                 Amount = t.Amount,
                 Description = t.Description,
@@ -119,7 +119,7 @@ namespace finalProject.Controllers
 
             _context.Transactions.Add(transaction);
 
-            
+
             account.Balance += model.ManualAmount;
 
             await _context.SaveChangesAsync();
@@ -177,6 +177,51 @@ namespace finalProject.Controllers
             TempData["Success"] = "Transactions imported successfully!";
             return RedirectToAction("Index");
         }
+        [HttpPost]
+        public async Task<IActionResult> MoveTransaction(int transactionId, int newAccountId)
+        {
+            var userId = _userManager.GetUserId(User);
+
+            var transaction = await _context.Transactions
+                .Include(t => t.Account)
+                .FirstOrDefaultAsync(t => t.Id == transactionId && t.UserId == userId);
+
+            if (transaction == null)
+            {
+                TempData["Error"] = "Transaction not found.";
+                return RedirectToAction("Index");
+            }
+
+            var newAccount = await _context.Accounts
+                .FirstOrDefaultAsync(a => a.Id == newAccountId && a.UserId == userId);
+
+            if (newAccount == null)
+            {
+                TempData["Error"] = "Target account not found.";
+                return RedirectToAction("Index");
+            }
+
+            if (transaction.AccountId == newAccountId)
+            {
+                TempData["Info"] = "Transaction is already in the selected account.";
+                return RedirectToAction("Index");
+            }
+
+            // Reverse from old account
+            transaction.Account.Balance -= transaction.Amount;
+
+            // Apply to new account
+            newAccount.Balance += transaction.Amount;
+
+            // Update transaction
+            transaction.AccountId = newAccountId;
+
+            await _context.SaveChangesAsync();
+
+            TempData["Success"] = "Transaction moved successfully!";
+            return RedirectToAction("Index");
+        }
+
 
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
@@ -184,7 +229,7 @@ namespace finalProject.Controllers
             var userId = _userManager.GetUserId(User);
 
             var transaction = await _context.Transactions
-                .Include(t => t.Account) 
+                .Include(t => t.Account)
                 .FirstOrDefaultAsync(t => t.Id == id && t.UserId == userId);
 
             if (transaction == null)
@@ -205,6 +250,87 @@ namespace finalProject.Controllers
             TempData["Success"] = "Transaction deleted successfully and balance updated!";
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        public async Task<IActionResult> TransferTransaction(int transactionId, int targetAccountId, decimal transferAmount)
+        {
+            if (transferAmount <= 0)
+            {
+                TempData["Error"] = "Transfer amount must be positive.";
+                return RedirectToAction("Index");
+            }
+
+            var userId = _userManager.GetUserId(User);
+
+            var originalTransaction = await _context.Transactions
+                .Include(t => t.Account)
+                .FirstOrDefaultAsync(t => t.Id == transactionId && t.UserId == userId);
+
+            if (originalTransaction == null)
+            {
+                TempData["Error"] = "Original transaction not found.";
+                return RedirectToAction("Index");
+            }
+
+            var targetAccount = await _context.Accounts
+                .FirstOrDefaultAsync(a => a.Id == targetAccountId && a.UserId == userId);
+
+            if (targetAccount == null)
+            {
+                TempData["Error"] = "Target account not found.";
+                return RedirectToAction("Index");
+            }
+
+            // Check if transfer amount is larger than available amount
+            if (Math.Abs(transferAmount) > Math.Abs(originalTransaction.Amount))
+            {
+                TempData["Error"] = "Transfer amount cannot be greater than the original transaction amount.";
+                return RedirectToAction("Index");
+            }
+
+            // Create the new transaction (copying properties)
+            var transferredTransaction = new Transaction
+            {
+                TransactionDateTime = DateTime.Now,
+                Amount = originalTransaction.Amount < 0 ? -transferAmount : transferAmount,
+                Description = $"Transfer from {originalTransaction.Account.Name}: {originalTransaction.Description}",
+                AccountId = targetAccount.Id,
+                CategoryId = originalTransaction.CategoryId,
+                UserId = userId
+            };
+            _context.Transactions.Add(transferredTransaction);
+
+            // Adjust balances
+            if (originalTransaction.Amount < 0)
+            {
+                // Original is negative
+                originalTransaction.Account.Balance -= transferAmount; 
+                targetAccount.Balance -= transferAmount; 
+            }
+            else
+            {
+                // Original is positive
+                originalTransaction.Account.Balance -= transferAmount;
+                targetAccount.Balance += transferAmount;
+            }
+
+            // Adjust the original transaction's amount
+            if (originalTransaction.Amount < 0)
+            {
+                originalTransaction.Amount += transferAmount; 
+            }
+            else
+            {
+                originalTransaction.Amount -= transferAmount;
+            }
+
+            await _context.SaveChangesAsync();
+
+            TempData["Success"] = "Transfer completed successfully!";
+            return RedirectToAction("Index");
+        }
+
+
 
     }
 }
