@@ -26,7 +26,6 @@ namespace finalProject.Controllers
             _userManager = userManager;
         }
 
-
         public async Task<IActionResult> Index()
         {
             var userId = _userManager.GetUserId(User);
@@ -39,6 +38,7 @@ namespace finalProject.Controllers
 
             var transactionVMs = transactions.Select(t => new TransactionViewModel
             {
+                Id = t.Id, 
                 TransactionDateTime = t.TransactionDateTime,
                 Amount = t.Amount,
                 Description = t.Description,
@@ -69,12 +69,41 @@ namespace finalProject.Controllers
         {
             var userId = _userManager.GetUserId(User);
 
-            var account = await _context.Accounts.FirstOrDefaultAsync(a => a.Id == model.SelectedAccountId && a.UserId == userId);
-            var category = await _context.Categories.FirstOrDefaultAsync(c => c.Id == model.SelectedCategoryId);
+            var account = await _context.Accounts
+                .FirstOrDefaultAsync(a => a.Id == model.SelectedAccountId && a.UserId == userId);
 
-            if (account == null || category == null)
+            if (account == null)
             {
-                TempData["Error"] = "Invalid account or category.";
+                TempData["Error"] = "Invalid account.";
+                return RedirectToAction("Index");
+            }
+
+            Category category = null;
+
+            if (!string.IsNullOrWhiteSpace(model.ManualCategoryName))
+            {
+                // Try to find if a category with the same name exists
+                category = await _context.Categories
+                    .FirstOrDefaultAsync(c => c.Name.ToLower() == model.ManualCategoryName.Trim().ToLower());
+
+                if (category == null)
+                {
+                    // Create new category
+                    category = new Category { Name = model.ManualCategoryName.Trim() };
+                    _context.Categories.Add(category);
+                    await _context.SaveChangesAsync();
+                }
+            }
+            else
+            {
+                // Use selected category
+                category = await _context.Categories
+                    .FirstOrDefaultAsync(c => c.Id == model.SelectedCategoryId);
+            }
+
+            if (category == null)
+            {
+                TempData["Error"] = "Invalid category.";
                 return RedirectToAction("Index");
             }
 
@@ -89,6 +118,10 @@ namespace finalProject.Controllers
             };
 
             _context.Transactions.Add(transaction);
+
+            
+            account.Balance += model.ManualAmount;
+
             await _context.SaveChangesAsync();
 
             TempData["Success"] = "Transaction added successfully!";
@@ -124,9 +157,7 @@ namespace finalProject.Controllers
                 await _context.SaveChangesAsync();
             }
 
-            var defaultCategory = await _context.Categories.FirstOrDefaultAsync(); 
-
-       
+            var defaultCategory = await _context.Categories.FirstOrDefaultAsync();
 
             if (defaultCategory == null)
             {
@@ -134,7 +165,6 @@ namespace finalProject.Controllers
                 _context.Categories.Add(defaultCategory);
                 await _context.SaveChangesAsync();
             }
-
 
             using var stream = file.OpenReadStream();
             await _SpreadsheetImportService.ImportTransactionsAsync(
@@ -148,6 +178,33 @@ namespace finalProject.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var userId = _userManager.GetUserId(User);
+
+            var transaction = await _context.Transactions
+                .Include(t => t.Account) 
+                .FirstOrDefaultAsync(t => t.Id == id && t.UserId == userId);
+
+            if (transaction == null)
+            {
+                TempData["Error"] = "Transaction not found.";
+                return RedirectToAction("Index");
+            }
+
+            // Adjust the account balance
+            if (transaction.Account != null)
+            {
+                transaction.Account.Balance -= transaction.Amount;
+            }
+
+            _context.Transactions.Remove(transaction);
+            await _context.SaveChangesAsync();
+
+            TempData["Success"] = "Transaction deleted successfully and balance updated!";
+            return RedirectToAction("Index");
+        }
 
     }
 }

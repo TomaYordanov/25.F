@@ -24,6 +24,10 @@ namespace finalProject.Controllers
         {
             var userId = _userManager.GetUserId(User);
 
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("Login", "Account");
+            }
 
             var transactions = await _context.Transactions
                 .Where(t => t.UserId == userId)
@@ -59,7 +63,7 @@ namespace finalProject.Controllers
                     .Where(a => a.UserId == userId)
                     .ToListAsync();
             }
-                               
+
             ViewBag.TotalSpent = Math.Abs(totalSpent);
             ViewBag.TransactionCount = transactionCount;
             ViewBag.CategoryCount = categoryCount;
@@ -70,6 +74,7 @@ namespace finalProject.Controllers
                 TotalBalance = totalBalance
             });
         }
+
 
 
         [HttpPost]

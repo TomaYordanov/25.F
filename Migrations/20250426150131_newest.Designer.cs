@@ -12,8 +12,8 @@ using finalProject.Data;
 namespace finalProject.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250425152422_deletionfix")]
-    partial class deletionfix
+    [Migration("20250426150131_newest")]
+    partial class newest
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,6 +34,9 @@ namespace finalProject.Migrations
 
                     b.Property<decimal>("Balance")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("IsDefault")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()

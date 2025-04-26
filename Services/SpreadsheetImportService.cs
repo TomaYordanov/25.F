@@ -47,22 +47,31 @@ namespace finalProject.Services
 
 
                 decimal amount = 0;
+                bool amountParsed = false;
+
                 if (!string.IsNullOrWhiteSpace(paymentsStr))
                 {
-                    decimal.TryParse(paymentsStr, NumberStyles.Any, CultureInfo.InvariantCulture, out amount);
-                    amount = -Math.Abs(amount); // Ensure it's negative
+                    if (decimal.TryParse(paymentsStr, NumberStyles.Any, CultureInfo.InvariantCulture, out amount))
+                    {
+                        amount = -Math.Abs(amount); 
+                        amountParsed = true;
+                    }
                 }
                 else if (!string.IsNullOrWhiteSpace(proceedsStr))
                 {
-                    decimal.TryParse(proceedsStr, NumberStyles.Any, CultureInfo.InvariantCulture, out amount);
-                    amount = Math.Abs(amount); // Ensure it's positive
+                    if (decimal.TryParse(proceedsStr, NumberStyles.Any, CultureInfo.InvariantCulture, out amount))
+                    {
+                        amount = Math.Abs(amount); 
+                        amountParsed = true;
+                    }
                 }
 
+                if (!amountParsed)
+                    continue; 
 
-                if (amount == 0)
-                    continue;
 
-                
+
+
                 var category = _context.Categories.FirstOrDefault(c => c.Name.ToLower() == reason.ToLower().Trim());
                 if (category == null)
                 {

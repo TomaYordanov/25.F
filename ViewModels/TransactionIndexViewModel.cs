@@ -5,25 +5,29 @@ namespace finalProject.ViewModels
 {
     public class TransactionIndexViewModel
     {
-        public List<TransactionViewModel> Transactions { get; set; } = new List<TransactionViewModel>();
+        public List<TransactionViewModel> Transactions { get; set; }
         public decimal TotalBalance { get; set; }
+        public List<Category> Categories { get; set; }
+        public List<Account> Accounts { get; set; }
 
-        public List<Category> Categories { get; set; } = new();
-        public List<Account> Accounts { get; set; } = new();
-
-
+        // Manual transaction input
         [Display(Name = "Date & Time")]
-        public DateTime ManualDateTime { get; set; } = DateTime.Now;
+        public DateTime ManualDateTime { get; set; }
 
-        [Required]
+        [Display(Name = "Amount")]
         public decimal ManualAmount { get; set; }
 
+        [Display(Name = "Description")]
         public string ManualDescription { get; set; }
 
-        [Display(Name = "Category")]
+        [Display(Name = "Choose Existing Category")]
         public int SelectedCategoryId { get; set; }
 
         [Display(Name = "Account")]
         public int SelectedAccountId { get; set; }
+
+        [Display(Name = "Or Create New Category")]
+        public string ManualCategoryName { get; set; }
     }
+
 }
