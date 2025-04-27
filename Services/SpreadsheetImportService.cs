@@ -49,25 +49,34 @@ namespace finalProject.Services
                 decimal amount = 0;
                 bool amountParsed = false;
 
-                if (!string.IsNullOrWhiteSpace(expendituresStr))
+                
+                expendituresStr = expendituresStr?.Trim();
+                incomeStr = incomeStr?.Trim();
+
+                
+                decimal expenditures = 0;
+                decimal income = 0;
+                bool expendituresParsed = decimal.TryParse(expendituresStr, NumberStyles.Any, CultureInfo.InvariantCulture, out expenditures);
+                bool incomeParsed = decimal.TryParse(incomeStr, NumberStyles.Any, CultureInfo.InvariantCulture, out income);
+
+                if (expendituresParsed && expenditures != 0)
                 {
-                    if (decimal.TryParse(expendituresStr, NumberStyles.Any, CultureInfo.InvariantCulture, out amount))
-                    {
-                        amount = -Math.Abs(amount); 
-                        amountParsed = true;
-                    }
+                    amount = -Math.Abs(expenditures); 
+                    amountParsed = true;
                 }
-                else if (!string.IsNullOrWhiteSpace(incomeStr))
+                else if (incomeParsed && income != 0)
                 {
-                    if (decimal.TryParse(incomeStr, NumberStyles.Any, CultureInfo.InvariantCulture, out amount))
-                    {
-                        amount = Math.Abs(amount); 
-                        amountParsed = true;
-                    }
+                    amount = Math.Abs(income); 
+                    amountParsed = true;
                 }
 
+                
                 if (!amountParsed)
-                    continue; 
+                {
+                    continue;
+                }
+
+
 
 
 

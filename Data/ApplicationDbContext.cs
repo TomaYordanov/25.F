@@ -16,6 +16,9 @@ namespace finalProject.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Account> Accounts { get; set; }
         public DbSet<RecurringTransaction> RecurringTransactions { get; set; }
+        public DbSet<Asset> Assets { get; set; }
+        public DbSet<SavingGoal> SavingGoals { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

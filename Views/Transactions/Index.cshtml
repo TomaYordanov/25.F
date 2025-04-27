@@ -27,45 +27,17 @@
 
 <hr />
 
-<!-- Manual Entry Form -->
-<h4>Add Transaction Manually</h4>
-<form asp-action="ManualAdd" method="post">
-    @Html.AntiForgeryToken() 
-    <div class="row">
-        <div class="col-md-2">
-            <label asp-for="ManualDateTime"></label>
-            <input asp-for="ManualDateTime" class="form-control" type="datetime-local" />
-        </div>
-        <div class="col-md-2">
-            <label asp-for="ManualAmount"></label>
-            <input asp-for="ManualAmount" class="form-control" />
-        </div>
-        <div class="col-md-3">
-            <label asp-for="ManualDescription"></label>
-            <input asp-for="ManualDescription" class="form-control" />
-        </div>
-        <div class="col-md-2">
-            <label asp-for="SelectedCategoryId"></label>
-            <select asp-for="SelectedCategoryId" class="form-control" asp-items="@(new SelectList(Model.Categories, "Id", "Name"))">
-                <option value="">-- Select Category --</option>
-            </select>
-        </div>
-        <div class="col-md-3">
-            <label asp-for="ManualCategoryName"></label>
-            <input asp-for="ManualCategoryName" class="form-control" placeholder="Enter new category (optional)" />
-        </div>
-        <div class="col-md-2">
-            <label asp-for="SelectedAccountId"></label>
-            <select asp-for="SelectedAccountId" class="form-control" asp-items="@(new SelectList(Model.Accounts, "Id", "Name"))">
-                <option value="">-- Select Account --</option>
-            </select>
-        </div>
+<!-- Button to trigger manual add -->
+<button class="btn btn-success mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#manualAddForm" aria-expanded="false" aria-controls="manualAddForm">
+    + Add Manual Transaction
+</button>
 
-        <div class="col-md-1 d-flex align-items-end">
-            <button type="submit" class="btn btn-success">Add</button>
-        </div>
+<div class="collapse" id="manualAddForm">
+    <div class="card card-body mt-3">
+        @await Html.PartialAsync("_ManualTransactionForm", Model)
     </div>
-</form>
+</div>
+
 
 <hr />
 
