@@ -7,8 +7,8 @@ namespace finalProject.Abstractions
     public interface ITransactionService
     {
         Task<TransactionIndexViewModel> GetAllTransactions(string userId, int pageNumber, int pageSize);
-        Task<int> GetTransactionCount(string userId);  
-        Task<TransactionIndexViewModel> GetPaginatedTransactions(string userId, int pageNumber, int pageSize);  
+        Task<int> GetTransactionCount(string userId);
+        Task<TransactionIndexViewModel> GetPaginatedTransactions(string userId, int pageNumber, int pageSize);
         Task<bool> ManualAddTransaction(TransactionIndexViewModel model, string userId);
         Task<bool> ImportTransactions(IFormFile file, string userId);
         Task<bool> MoveTransaction(int transactionId, int newAccountId, string userId);

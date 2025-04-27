@@ -19,84 +19,131 @@ public class TransactionsController : Controller
 
     public async Task<IActionResult> Index(int pageNumber = 1, int pageSize = 20)
     {
-        var userId = _userManager.GetUserId(User);
-        var model = await _transactionService.GetAllTransactions(userId, pageNumber, pageSize);
-        return View(model);
+        try
+        {
+            var userId = _userManager.GetUserId(User);
+            var model = await _transactionService.GetAllTransactions(userId, pageNumber, pageSize);
+            return View(model);
+        }
+        catch (Exception ex)
+        {
+            TempData["Error"] = "An error occurred while fetching transactions.";
+            return RedirectToAction("Index");
+        }
     }
 
-
     [HttpPost]
-    [ValidateAntiForgeryToken]  
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> ManualAdd(TransactionIndexViewModel model)
     {
-        var userId = _userManager.GetUserId(User);
-        if (!await _transactionService.ManualAddTransaction(model, userId))
+        try
         {
-            TempData["Error"] = "Failed to add transaction.";
+            var userId = _userManager.GetUserId(User);
+            if (!await _transactionService.ManualAddTransaction(model, userId))
+            {
+                TempData["Error"] = "Failed to add transaction.";
+                return RedirectToAction("Index");
+            }
+
+            TempData["Success"] = "Transaction added successfully!";
             return RedirectToAction("Index");
         }
-
-        TempData["Success"] = "Transaction added successfully!";
-        return RedirectToAction("Index");
+        catch (Exception ex)
+        {
+            TempData["Error"] = "An error occurred while adding the transaction.";
+            return RedirectToAction("Index");
+        }
     }
 
     [HttpPost]
-    [ValidateAntiForgeryToken]  
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> Import(IFormFile file)
     {
-        var userId = _userManager.GetUserId(User);
-        if (!await _transactionService.ImportTransactions(file, userId))
+        try
         {
-            TempData["Error"] = "Failed to import transactions.";
+            var userId = _userManager.GetUserId(User);
+            if (!await _transactionService.ImportTransactions(file, userId))
+            {
+                TempData["Error"] = "Failed to import transactions.";
+                return RedirectToAction("Index");
+            }
+
+            TempData["Success"] = "Transactions imported successfully!";
             return RedirectToAction("Index");
         }
-
-        TempData["Success"] = "Transactions imported successfully!";
-        return RedirectToAction("Index");
+        catch (Exception ex)
+        {
+            TempData["Error"] = "An error occurred while importing the transactions.";
+            return RedirectToAction("Index");
+        }
     }
 
     [HttpPost]
-    [ValidateAntiForgeryToken]  
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> MoveTransaction(int transactionId, int newAccountId)
     {
-        var userId = _userManager.GetUserId(User);
-        if (!await _transactionService.MoveTransaction(transactionId, newAccountId, userId))
+        try
         {
-            TempData["Error"] = "Failed to move transaction.";
+            var userId = _userManager.GetUserId(User);
+            if (!await _transactionService.MoveTransaction(transactionId, newAccountId, userId))
+            {
+                TempData["Error"] = "Failed to move transaction.";
+                return RedirectToAction("Index");
+            }
+
+            TempData["Success"] = "Transaction moved successfully!";
             return RedirectToAction("Index");
         }
-
-        TempData["Success"] = "Transaction moved successfully!";
-        return RedirectToAction("Index");
+        catch (Exception ex)
+        {
+            TempData["Error"] = "An error occurred while moving the transaction.";
+            return RedirectToAction("Index");
+        }
     }
 
     [HttpPost]
-    [ValidateAntiForgeryToken]  
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> Delete(int id)
     {
-        var userId = _userManager.GetUserId(User);
-        if (!await _transactionService.DeleteTransaction(id, userId))
+        try
         {
-            TempData["Error"] = "Failed to delete transaction.";
+            var userId = _userManager.GetUserId(User);
+            if (!await _transactionService.DeleteTransaction(id, userId))
+            {
+                TempData["Error"] = "Failed to delete transaction.";
+                return RedirectToAction("Index");
+            }
+
+            TempData["Success"] = "Transaction deleted successfully!";
             return RedirectToAction("Index");
         }
-
-        TempData["Success"] = "Transaction deleted successfully!";
-        return RedirectToAction("Index");
+        catch (Exception ex)
+        {
+            TempData["Error"] = "An error occurred while deleting the transaction.";
+            return RedirectToAction("Index");
+        }
     }
 
     [HttpPost]
-    [ValidateAntiForgeryToken]  
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> TransferTransaction(int transactionId, int targetAccountId, decimal transferAmount)
     {
-        var userId = _userManager.GetUserId(User);
-        if (!await _transactionService.TransferTransaction(transactionId, targetAccountId, transferAmount, userId))
+        try
         {
-            TempData["Error"] = "Failed to transfer transaction.";
+            var userId = _userManager.GetUserId(User);
+            if (!await _transactionService.TransferTransaction(transactionId, targetAccountId, transferAmount, userId))
+            {
+                TempData["Error"] = "Failed to transfer transaction.";
+                return RedirectToAction("Index");
+            }
+
+            TempData["Success"] = "Transfer completed successfully!";
             return RedirectToAction("Index");
         }
-
-        TempData["Success"] = "Transfer completed successfully!";
-        return RedirectToAction("Index");
+        catch (Exception ex)
+        {
+            TempData["Error"] = "An error occurred while transferring the transaction.";
+            return RedirectToAction("Index");
+        }
     }
 }

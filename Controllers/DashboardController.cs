@@ -21,69 +21,93 @@ namespace finalProject.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var userId = _userManager.GetUserId(User);
-
-            if (string.IsNullOrEmpty(userId))
+            try
             {
-                return RedirectToAction("Login", "Account");
-            }
+                var userId = _userManager.GetUserId(User);
 
-            var model = await _dashboardService.GetDashboardDataAsync(userId);
-            return View(model);
+                if (string.IsNullOrEmpty(userId))
+                {
+                    return RedirectToAction("Login", "Account");
+                }
+
+                var model = await _dashboardService.GetDashboardDataAsync(userId);
+                return View(model);
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = "An unexpected error occurred while fetching the dashboard data.";
+                return RedirectToAction("Index");
+            }
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddAccount(DashboardViewModel model)
         {
-            var userId = _userManager.GetUserId(User);
-
-            if (string.IsNullOrEmpty(userId))
+            try
             {
-                return RedirectToAction("Login", "Account");
-            }
+                var userId = _userManager.GetUserId(User);
 
-            if (!ModelState.IsValid)
-            {
-                TempData["Error"] = "Invalid account details.";
+                if (string.IsNullOrEmpty(userId))
+                {
+                    return RedirectToAction("Login", "Account");
+                }
+
+                if (!ModelState.IsValid)
+                {
+                    TempData["Error"] = "Invalid account details.";
+                    return RedirectToAction("Index");
+                }
+
+                var result = await _dashboardService.AddAccountAsync(userId, model);
+
+                if (!result)
+                {
+                    TempData["Error"] = "Failed to add account.";
+                    return RedirectToAction("Index");
+                }
+
+                TempData["Success"] = "Account created successfully!";
                 return RedirectToAction("Index");
             }
-
-            var result = await _dashboardService.AddAccountAsync(userId, model);
-
-            if (!result)
+            catch (Exception ex)
             {
-                TempData["Error"] = "Failed to add account.";
+                TempData["Error"] = "An error occurred while adding the account.";
                 return RedirectToAction("Index");
             }
-
-            TempData["Success"] = "Account created successfully!";
-            return RedirectToAction("Index");
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteAccount(int accountId)
         {
-            var userId = _userManager.GetUserId(User);
-
-            if (string.IsNullOrEmpty(userId))
+            try
             {
-                return RedirectToAction("Login", "Account");
+                var userId = _userManager.GetUserId(User);
+
+                if (string.IsNullOrEmpty(userId))
+                {
+                    return RedirectToAction("Login", "Account");
+                }
+
+                var result = await _dashboardService.DeleteAccountAsync(userId, accountId);
+
+                if (!result)
+                {
+                    TempData["Error"] = "Failed to delete account.";
+                }
+                else
+                {
+                    TempData["Success"] = "Account deleted successfully!";
+                }
+
+                return RedirectToAction("Index");
             }
-
-            var result = await _dashboardService.DeleteAccountAsync(userId, accountId);
-
-            if (!result)
+            catch (Exception ex)
             {
-                TempData["Error"] = "Failed to delete account.";
+                TempData["Error"] = "An error occurred while deleting the account.";
+                return RedirectToAction("Index");
             }
-            else
-            {
-                TempData["Success"] = "Account deleted successfully!";
-            }
-
-            return RedirectToAction("Index");
         }
     }
 }

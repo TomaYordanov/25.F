@@ -160,21 +160,24 @@
 <div class="pagination">
     @if (Model.PageNumber > 1)
     {
-        <a href="@Url.Action("Index", new { pageNumber = Model.PageNumber - 1, pageSize = Model.PageSize })" class="btn btn-primary">Previous</a>
+        <a href="@Url.Action("Index", new { pageNumber = Model.PageNumber - 1, pageSize = Model.PageSize })" class="btn btn-primary">
+            &larr;
+        </a>
     }
-
     @for (var currentPage = 1; currentPage <= Model.TotalPages; currentPage++)
     {
         <a href="@Url.Action("Index", new { pageNumber = currentPage, pageSize = Model.PageSize })" class="btn btn-secondary @((currentPage == Model.PageNumber) ? "active" : "")">
             @currentPage
         </a>
     }
-
     @if (Model.PageNumber < Model.TotalPages)
     {
-        <a href="@Url.Action("Index", new { pageNumber = Model.PageNumber + 1, pageSize = Model.PageSize })" class="btn btn-primary">Next</a>
+        <a href="@Url.Action("Index", new { pageNumber = Model.PageNumber + 1, pageSize = Model.PageSize })" class="btn btn-primary">
+            &rarr;
+        </a>
     }
 </div>
+
 
 
 
