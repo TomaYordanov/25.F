@@ -50,6 +50,7 @@
 
 <h4>Add New Account</h4>
 <form asp-action="AddAccount" method="post">
+    @Html.AntiForgeryToken() 
     <div class="form-group">
         <label asp-for="NewAccountName">Account Name</label>
         <input asp-for="NewAccountName" class="form-control" />
@@ -86,6 +87,7 @@
                     </td>
                     <td>
                         <form asp-action="DeleteAccount" method="post">
+                            @Html.AntiForgeryToken() 
                             <input type="hidden" name="accountId" value="@account.Id" />
                             <button class="btn btn-danger btn-sm">Delete</button>
                         </form>

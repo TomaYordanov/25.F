@@ -30,8 +30,8 @@ namespace finalProject.Services
             {
                 var dateStr = worksheet.Cells[row, 1].Text;
                 var timeStr = worksheet.Cells[row, 2].Text;
-                var paymentsStr = worksheet.Cells[row, 3].Text;
-                var proceedsStr = worksheet.Cells[row, 4].Text;
+                var expendituresStr = worksheet.Cells[row, 3].Text;
+                var incomeStr = worksheet.Cells[row, 4].Text;
                 var description = worksheet.Cells[row, 5].Text?.Trim();
                 var reason = worksheet.Cells[row, 6].Text?.Trim(); 
                 var moreDetails = worksheet.Cells[row, 7].Text?.Trim();
@@ -49,17 +49,17 @@ namespace finalProject.Services
                 decimal amount = 0;
                 bool amountParsed = false;
 
-                if (!string.IsNullOrWhiteSpace(paymentsStr))
+                if (!string.IsNullOrWhiteSpace(expendituresStr))
                 {
-                    if (decimal.TryParse(paymentsStr, NumberStyles.Any, CultureInfo.InvariantCulture, out amount))
+                    if (decimal.TryParse(expendituresStr, NumberStyles.Any, CultureInfo.InvariantCulture, out amount))
                     {
                         amount = -Math.Abs(amount); 
                         amountParsed = true;
                     }
                 }
-                else if (!string.IsNullOrWhiteSpace(proceedsStr))
+                else if (!string.IsNullOrWhiteSpace(incomeStr))
                 {
-                    if (decimal.TryParse(proceedsStr, NumberStyles.Any, CultureInfo.InvariantCulture, out amount))
+                    if (decimal.TryParse(incomeStr, NumberStyles.Any, CultureInfo.InvariantCulture, out amount))
                     {
                         amount = Math.Abs(amount); 
                         amountParsed = true;

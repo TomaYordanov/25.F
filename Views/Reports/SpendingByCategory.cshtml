@@ -14,6 +14,7 @@
 </h2>
 
 <form method="get" asp-controller="Reports" asp-action="SpendingByCategory" class="form-inline mb-3">
+    @Html.AntiForgeryToken()
     <label for="month" class="form-label me-2">Select Month:</label>
     <select name="month" id="month" class="form-select me-2" onchange="this.form.submit()">
         @{

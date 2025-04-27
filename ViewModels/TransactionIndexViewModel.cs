@@ -10,7 +10,7 @@ namespace finalProject.ViewModels
         public List<Category> Categories { get; set; }
         public List<Account> Accounts { get; set; }
 
-        // Manual transaction input
+        // Manual transaction input fields
         [Display(Name = "Date & Time")]
         public DateTime ManualDateTime { get; set; }
 
@@ -28,6 +28,12 @@ namespace finalProject.ViewModels
 
         [Display(Name = "Or Create New Category")]
         public string ManualCategoryName { get; set; }
+
+        // Pagination properties
+        public int PageNumber { get; set; }
+        public int TotalPages { get; set; }
+        public int TotalCount { get; set; }
+        public int PageSize { get; set; }
     }
 
 }

@@ -17,14 +17,16 @@ public class TransactionsController : Controller
         _userManager = userManager;
     }
 
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(int pageNumber = 1, int pageSize = 20)
     {
         var userId = _userManager.GetUserId(User);
-        var model = await _transactionService.GetAllTransactions(userId);
+        var model = await _transactionService.GetAllTransactions(userId, pageNumber, pageSize);
         return View(model);
     }
 
+
     [HttpPost]
+    [ValidateAntiForgeryToken]  
     public async Task<IActionResult> ManualAdd(TransactionIndexViewModel model)
     {
         var userId = _userManager.GetUserId(User);
@@ -39,6 +41,7 @@ public class TransactionsController : Controller
     }
 
     [HttpPost]
+    [ValidateAntiForgeryToken]  
     public async Task<IActionResult> Import(IFormFile file)
     {
         var userId = _userManager.GetUserId(User);
@@ -53,6 +56,7 @@ public class TransactionsController : Controller
     }
 
     [HttpPost]
+    [ValidateAntiForgeryToken]  
     public async Task<IActionResult> MoveTransaction(int transactionId, int newAccountId)
     {
         var userId = _userManager.GetUserId(User);
@@ -67,6 +71,7 @@ public class TransactionsController : Controller
     }
 
     [HttpPost]
+    [ValidateAntiForgeryToken]  
     public async Task<IActionResult> Delete(int id)
     {
         var userId = _userManager.GetUserId(User);
@@ -81,6 +86,7 @@ public class TransactionsController : Controller
     }
 
     [HttpPost]
+    [ValidateAntiForgeryToken]  
     public async Task<IActionResult> TransferTransaction(int transactionId, int targetAccountId, decimal transferAmount)
     {
         var userId = _userManager.GetUserId(User);

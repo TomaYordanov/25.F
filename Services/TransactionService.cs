@@ -20,12 +20,17 @@ namespace finalProject.Services
             _userManager = userManager;
         }
 
-        public async Task<TransactionIndexViewModel> GetAllTransactions(string userId)
+        public async Task<TransactionIndexViewModel> GetAllTransactions(string userId, int pageNumber, int pageSize)
         {
+            var skip = (pageNumber - 1) * pageSize;
+
             var transactions = await _context.Transactions
                 .Include(t => t.Category)
                 .Include(t => t.Account)
                 .Where(t => t.UserId == userId)
+                .OrderBy(t => t.TransactionDateTime) 
+                .Skip(skip)
+                .Take(pageSize)
                 .ToListAsync();
 
             var transactionVMs = transactions.Select(t => new TransactionViewModel
@@ -42,6 +47,12 @@ namespace finalProject.Services
                 .Where(a => a.UserId == userId)
                 .SumAsync(a => a.Balance);
 
+            var totalCount = await _context.Transactions
+                .Where(t => t.UserId == userId)
+                .CountAsync();
+
+            var totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+
             var categories = await _context.Categories.ToListAsync();
             var accounts = await _context.Accounts.Where(a => a.UserId == userId).ToListAsync();
 
@@ -50,9 +61,14 @@ namespace finalProject.Services
                 Transactions = transactionVMs,
                 TotalBalance = totalBalance,
                 Categories = categories,
-                Accounts = accounts
+                Accounts = accounts,
+                PageNumber = pageNumber,    
+                PageSize = pageSize,        
+                TotalCount = totalCount,    
+                TotalPages = totalPages    
             };
         }
+
 
         public async Task<bool> ManualAddTransaction(TransactionIndexViewModel model, string userId)
         {
@@ -200,5 +216,51 @@ namespace finalProject.Services
             await _context.SaveChangesAsync();
             return true;
         }
+        public async Task<TransactionIndexViewModel> GetPaginatedTransactions(string userId, int pageNumber, int pageSize)
+        {
+            var skip = (pageNumber - 1) * pageSize;
+
+            var transactions = await _context.Transactions
+                .Include(t => t.Category)
+                .Include(t => t.Account)
+                .Where(t => t.UserId == userId)
+                .OrderBy(t => t.TransactionDateTime)
+                .Skip(skip)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var transactionVMs = transactions.Select(t => new TransactionViewModel
+            {
+                Id = t.Id,
+                TransactionDateTime = t.TransactionDateTime,
+                Amount = t.Amount,
+                Description = t.Description,
+                CategoryName = t.Category?.Name,
+                AccountName = t.Account?.Name
+            }).ToList();
+
+            var categories = await _context.Categories.ToListAsync();
+            var accounts = await _context.Accounts.Where(a => a.UserId == userId).ToListAsync();
+
+            return new TransactionIndexViewModel
+            {
+                Transactions = transactionVMs,
+                Categories = categories,
+                Accounts = accounts,
+                TotalBalance = await _context.Accounts.Where(a => a.UserId == userId).SumAsync(a => a.Balance),
+                PageSize = pageSize,
+                PageNumber = pageNumber,
+                TotalCount = await _context.Transactions.Where(t => t.UserId == userId).CountAsync(),
+                TotalPages = (int)Math.Ceiling((double)await _context.Transactions.Where(t => t.UserId == userId).CountAsync() / pageSize)
+            };
+        }
+
+        public async Task<int> GetTransactionCount(string userId)
+        {
+            return await _context.Transactions
+                .Where(t => t.UserId == userId)
+                .CountAsync();
+        }
+
     }
 }

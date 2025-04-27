@@ -3531,7 +3531,7 @@
 
           var _state$elements = state.elements,
               reference = _state$elements.reference,
-              popper = _state$elements.popper; // Don't proceed if `reference` or `popper` are not valid elements
+              popper = _state$elements.popper; // Don't income if `reference` or `popper` are not valid elements
           // anymore
 
           if (!areValidElements(reference, popper)) {
