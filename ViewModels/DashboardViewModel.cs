@@ -15,7 +15,13 @@ namespace finalProject.ViewModels
         [Display(Name = "Initial Balance")]
         [Range(0, double.MaxValue, ErrorMessage = "Balance must be non-negative.")]
         public decimal NewAccountBalance { get; set; }
+
         public decimal TotalBalance { get; set; }
 
+        public int TransactionCount { get; set; }
+        
+        public int CategoryCount { get; set; }
+        
+        public decimal TotalSpent { get; set; }
     }
 }

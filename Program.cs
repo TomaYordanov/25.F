@@ -4,6 +4,7 @@ using finalProject.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using System.Globalization;
+using finalProject.Abstractions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,12 +21,14 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => {
 
 builder.Services.AddRazorPages();
 
+// Register your services
+builder.Services.AddScoped<ITransactionService, TransactionService>();
+builder.Services.AddScoped<IDashboardService, DashboardService>(); 
 
 builder.Services.AddTransient<SpreadsheetImportService>();
-builder.Services.AddTransient<UserSeedService>(); 
+builder.Services.AddTransient<UserSeedService>();
 
 var app = builder.Build();
-
 
 var cultureInfo = new CultureInfo("en-US");
 CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
@@ -46,7 +49,6 @@ using (var scope = app.Services.CreateScope())
         logger.LogError(ex, "An error occurred during migration or seeding.");
     }
 }
-
 
 if (!app.Environment.IsDevelopment())
 {
