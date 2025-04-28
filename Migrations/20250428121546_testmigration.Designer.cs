@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using finalProject.Data;
 
@@ -11,9 +12,10 @@ using finalProject.Data;
 namespace finalProject.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250428121546_testmigration")]
+    partial class testmigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -226,6 +228,10 @@ namespace finalProject.Migrations
 
                     b.Property<bool>("IsCompleted")
                         .HasColumnType("bit");
+
+                    b.Property<string>("Notes")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("TargetAmount")
                         .HasColumnType("decimal(18,2)");
@@ -465,7 +471,7 @@ namespace finalProject.Migrations
             modelBuilder.Entity("finalProject.Models.SavingGoal", b =>
                 {
                     b.HasOne("finalProject.Models.ApplicationUser", "User")
-                        .WithMany("SavingGoals")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -559,8 +565,6 @@ namespace finalProject.Migrations
             modelBuilder.Entity("finalProject.Models.ApplicationUser", b =>
                 {
                     b.Navigation("Accounts");
-
-                    b.Navigation("SavingGoals");
 
                     b.Navigation("Transactions");
                 });

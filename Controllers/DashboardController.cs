@@ -23,7 +23,7 @@ namespace finalProject.Controllers
         {
             try
             {
-                var userId = _userManager.GetUserId(User);
+                var userId = _userManager.GetUserId(User); 
 
                 if (string.IsNullOrEmpty(userId))
                 {

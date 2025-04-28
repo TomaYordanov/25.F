@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using System.Globalization;
 using finalProject.Abstractions;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Identity/Account/Register"; 
+        options.AccessDeniedPath = "/Identity/Account/AccessDenied"; 
+    });
+
 
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => {
     options.SignIn.RequireConfirmedAccount = false;
@@ -23,8 +32,8 @@ builder.Services.AddRazorPages();
 
 // Register your services
 builder.Services.AddScoped<ITransactionService, TransactionService>();
-builder.Services.AddScoped<IDashboardService, DashboardService>(); 
-
+builder.Services.AddScoped<IDashboardService, DashboardService>();
+builder.Services.AddScoped<ISavingGoalService, SavingGoalService>();
 builder.Services.AddTransient<SpreadsheetImportService>();
 builder.Services.AddTransient<UserSeedService>();
 

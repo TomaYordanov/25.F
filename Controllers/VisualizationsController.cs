@@ -1,76 +1,46 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using finalProject.Data;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using finalProject.Abstractions;
+using finalProject.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 
 namespace finalProject.Controllers
 {
+    [Authorize]
     public class VisualizationsController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ISavingGoalService _savingGoalService;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public VisualizationsController(ApplicationDbContext context)
+        public VisualizationsController(ISavingGoalService savingGoalService, UserManager<ApplicationUser> userManager)
         {
-            _context = context;
+            _savingGoalService = savingGoalService;
+            _userManager = userManager;
         }
 
-        public async Task<IActionResult> SpendingByCategoryChart(string month = "All", string year = "All")
+        private async Task<string> GetUserIdAsync()
         {
-            var transactions = _context.Transactions
-                .Include(t => t.Category)
-                .AsQueryable();
-
-            if (int.TryParse(month, out int monthNumber) && monthNumber >= 1 && monthNumber <= 12)
-            {
-                transactions = transactions
-                    .Where(t => t.TransactionDateTime.Month == monthNumber);
-            }
-
-            if (int.TryParse(year, out int yearNumber))
-            {
-                transactions = transactions
-                    .Where(t => t.TransactionDateTime.Year == yearNumber);
-            }
-
-            var grouped = await transactions
-                .Where(t => t.Amount < 0)
-                .GroupBy(t => t.Category.Name)
-                .Select(g => new
-                {
-                    Category = g.Key,
-                    Total = g.Sum(t => t.Amount)
-                })
-                .ToListAsync();
-
-            return View(grouped);
+            var user = await _userManager.GetUserAsync(User);
+            return user?.Id;
         }
 
-        public async Task<IActionResult> MonthlyBalanceChart()
+        public async Task<IActionResult> YearlySavingsChart()
         {
-            var transactions = await _context.Transactions
-                .Where(t => t.TransactionDateTime != null)
-                .ToListAsync();
+            var userId = await GetUserIdAsync();
+            var goals = await _savingGoalService.GetGoalsAsync(userId);
 
-            var monthlyData = transactions
-                .GroupBy(t => new { t.TransactionDateTime.Year, t.TransactionDateTime.Month })
+            var yearlySavings = goals
+                .Where(g => g.Deadline.HasValue)
+                .GroupBy(g => g.Deadline.Value.Year)
                 .Select(g => new
                 {
-                    Year = g.Key.Year,
-                    Month = g.Key.Month,
-                    Income = g.Where(t => t.Amount > 0).Sum(t => t.Amount),
-                    Expenditure = g.Where(t => t.Amount < 0).Sum(t => t.Amount)
+                    Year = g.Key,
+                    TotalSaved = g.Sum(goal => goal.CurrentAmount)
                 })
-                .OrderBy(g => g.Year).ThenBy(g => g.Month)
+                .OrderBy(g => g.Year)
                 .ToList();
 
-            return View(monthlyData);
+            return View(yearlySavings);
         }
-
-       // public async Task<IActionResult> YearlySavingsChart()
-       // {
-      //  }
-
-
     }
 }

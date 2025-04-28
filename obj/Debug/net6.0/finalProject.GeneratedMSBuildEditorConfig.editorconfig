@@ -54,6 +54,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xTcGVuZGluZ0J5Q2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Toma/source/repos/finalProject/finalProject/Views/SavingGoal/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2F2aW5nR29hbFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Toma/source/repos/finalProject/finalProject/Views/SavingGoal/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2F2aW5nR29hbFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Toma/source/repos/finalProject/finalProject/Views/SavingGoal/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2F2aW5nR29hbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Toma/source/repos/finalProject/finalProject/Views/Shared/Currency.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEN1cnJlbmN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -84,6 +96,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Toma/source/repos/finalProject/finalProject/Views/Visualizations/SpendingByCategoryChart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzdWFsaXphdGlvbnNcU3BlbmRpbmdCeUNhdGVnb3J5Q2hhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Toma/source/repos/finalProject/finalProject/Views/Visualizations/YearlySavingsChart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzdWFsaXphdGlvbnNcWWVhcmx5U2F2aW5nc0NoYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Toma/source/repos/finalProject/finalProject/Views/_ViewImports.cshtml]

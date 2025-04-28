@@ -24,11 +24,11 @@ namespace finalProject.Data
         {
             base.OnModelCreating(builder);
 
-             builder.Entity<Transaction>()
-            .HasOne(t => t.Account)
-            .WithMany(a => a.Transactions)
-            .HasForeignKey(t => t.AccountId)
-            .OnDelete(DeleteBehavior.Cascade);
+            builder.Entity<Transaction>()
+           .HasOne(t => t.Account)
+           .WithMany(a => a.Transactions)
+           .HasForeignKey(t => t.AccountId)
+           .OnDelete(DeleteBehavior.Cascade);
 
             builder.Entity<Transaction>()
                 .HasOne(t => t.User)
@@ -59,6 +59,25 @@ namespace finalProject.Data
                 .HasOne(rt => rt.Category)
                 .WithMany()
                 .HasForeignKey(rt => rt.CategoryId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<SavingGoal>()
+                .HasOne(sg => sg.User)
+                .WithMany()
+                .HasForeignKey(sg => sg.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+
+            builder.Entity<Asset>()
+                .HasOne(a => a.User)
+                .WithMany()
+                .HasForeignKey(a => a.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<SavingGoal>()
+                .HasOne(sg => sg.User)
+                .WithMany(u => u.SavingGoals)
+                .HasForeignKey(sg => sg.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
 

@@ -12,5 +12,6 @@ namespace finalProject.Models
 
         public ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
         public ICollection<Account> Accounts { get; set; } = new List<Account>();
+        public ICollection<SavingGoal> SavingGoals { get; set; } = new List<SavingGoal>();
     }
 }
