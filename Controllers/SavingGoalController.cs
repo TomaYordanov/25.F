@@ -40,12 +40,14 @@ namespace finalProject.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(SavingGoal goal)
         {
-            if (ModelState.IsValid)
+            if (ModelState.ErrorCount <= 3)
             {
                 goal.UserId = await GetUserIdAsync();
+                Console.WriteLine($"Creating goal for user: {goal.UserId}");
                 await _savingGoalService.AddGoalAsync(goal);
                 return RedirectToAction(nameof(Index));
             }
+
             return View(goal);
         }
 
@@ -61,7 +63,7 @@ namespace finalProject.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(SavingGoal goal)
         {
-            if (ModelState.IsValid)
+            if (ModelState.ErrorCount <= 2)
             {
                 goal.UserId = await GetUserIdAsync();
                 await _savingGoalService.UpdateGoalAsync(goal);

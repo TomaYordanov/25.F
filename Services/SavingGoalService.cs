@@ -16,10 +16,16 @@ namespace finalProject.Services
 
         public async Task AddGoalAsync(SavingGoal goal)
         {
+            if (string.IsNullOrEmpty(goal.UserId))
+            {
+                throw new ArgumentException("UserId must be set before adding a SavingGoal.");
+            }
+
             goal.IsCompleted = goal.CurrentAmount >= goal.TargetAmount;
             _context.SavingGoals.Add(goal);
             await _context.SaveChangesAsync();
         }
+
 
         public async Task<IEnumerable<SavingGoal>> GetGoalsAsync(string userId)
         {
