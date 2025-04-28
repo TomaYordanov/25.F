@@ -74,6 +74,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Toma/source/repos/finalProject/finalProject/Views/Transactions/_ManualTransactionForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25zXF9NYW51YWxUcmFuc2FjdGlvbkZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Toma/source/repos/finalProject/finalProject/Views/Visualizations/MonthlyBalanceChart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzdWFsaXphdGlvbnNcTW9udGhseUJhbGFuY2VDaGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Toma/source/repos/finalProject/finalProject/Views/Visualizations/SpendingByCategoryChart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzdWFsaXphdGlvbnNcU3BlbmRpbmdCeUNhdGVnb3J5Q2hhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Toma/source/repos/finalProject/finalProject/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

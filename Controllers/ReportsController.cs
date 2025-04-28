@@ -14,7 +14,7 @@ namespace finalProject.Controllers
             _context = context;
         }
 
-        public IActionResult SpendingByCategory(string month = "All")
+        public IActionResult SpendingByCategory(string month = "All", string year = "All")
         {
             var transactions = _context.Transactions
                 .Include(t => t.Category)
@@ -26,17 +26,24 @@ namespace finalProject.Controllers
                     .Where(t => t.TransactionDateTime.Month == monthNumber);
             }
 
-           
+            if (int.TryParse(year, out int yearNumber))
+            {
+                transactions = transactions
+                    .Where(t => t.TransactionDateTime.Year == yearNumber);
+            }
+
             var data = transactions
-                .Where(t => t.Amount < 0)
+                .Where(t => t.Amount < 0) 
                 .GroupBy(t => t.Category.Name)
                 .Select(g => new
                 {
                     Category = g.Key,
                     Total = g.Sum(t => t.Amount)
-                }).ToList();
+                })
+                .ToList();
 
             return View(data);
         }
+
     }
 }
