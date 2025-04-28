@@ -5,6 +5,8 @@ using finalProject.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace finalProject.Services
 {
@@ -23,17 +25,6 @@ namespace finalProject.Services
         {
             try
             {
-                var transactions = await _context.Transactions
-                    .Where(t => t.UserId == userId)
-                    .ToListAsync();
-
-                var totalSpent = transactions
-                    .Where(t => t.Amount < 0)
-                    .Sum(t => t.Amount);
-
-                var transactionCount = transactions.Count;
-                var categoryCount = await _context.Categories.CountAsync();
-
                 var accounts = await _context.Accounts
                     .Where(a => a.UserId == userId)
                     .ToListAsync();
@@ -55,10 +46,23 @@ namespace finalProject.Services
                         .ToListAsync();
                 }
 
+                var totalBalance = accounts.Sum(a => a.Balance);
+
+                var assets = await _context.Assets
+                    .Where(a => a.UserId == userId)
+                    .ToListAsync();
+
+                var totalAssetValue = assets.Sum(a => a.Value);
+
+                var netWorth = totalBalance + totalAssetValue;
+
                 return new DashboardViewModel
                 {
                     Accounts = accounts,
-                    TotalBalance = accounts.Sum(a => a.Balance)
+                    Assets = assets,
+                    TotalBalance = totalBalance,
+                    TotalAssetValue = totalAssetValue,
+                    NetWorth = netWorth
                 };
             }
             catch (Exception ex)
@@ -113,3 +117,4 @@ namespace finalProject.Services
         }
     }
 }
+    

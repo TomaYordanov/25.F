@@ -19,32 +19,29 @@
     <div class="col-md-4">
         <div class="card text-white bg-primary mb-3">
             <div class="card-body">
-                <h5 class="card-title">Balance:</h5>
-                <p class="card-text">
-                    <span style="color: white">
-                        @Html.DisplayFor(_ => Model.TotalBalance, "Currency")
-                    </span>
-                </p>
+                <h5 class="card-title">Total Bank Balance</h5>
+                <p class="card-text">@Html.DisplayFor(_ => Model.TotalBalance, "Currency")</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-secondary mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Total Assets</h5>
+                <p class="card-text">@Html.DisplayFor(_ => Model.TotalAssetValue, "Currency")</p>
             </div>
         </div>
     </div>
     <div class="col-md-4">
         <div class="card text-white bg-success mb-3">
             <div class="card-body">
-                <h5 class="card-title">Transactions</h5>
-                <p class="card-text">@ViewBag.TransactionCount</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card text-white bg-info mb-3">
-            <div class="card-body">
-                <h5 class="card-title">Categories</h5>
-                <p class="card-text">@ViewBag.CategoryCount</p>
+                <h5 class="card-title">Net Worth</h5>
+                <p class="card-text">@Html.DisplayFor(_ => Model.NetWorth, "Currency")</p>
             </div>
         </div>
     </div>
 </div>
+
 
 <hr />
 

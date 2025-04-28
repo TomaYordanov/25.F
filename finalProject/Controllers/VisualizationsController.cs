@@ -1,20 +1,22 @@
 ﻿using finalProject.Abstractions;
 using finalProject.Data;
 using finalProject.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
+[Authorize]
 public class VisualizationsController : Controller
 {
     private readonly ISavingGoalService _savingGoalService;
     private readonly UserManager<ApplicationUser> _userManager;
-    private readonly ApplicationDbContext _context; 
+    private readonly ApplicationDbContext _context;
     public VisualizationsController(ISavingGoalService savingGoalService, UserManager<ApplicationUser> userManager, ApplicationDbContext context)
     {
         _savingGoalService = savingGoalService;
         _userManager = userManager;
-        _context = context; 
+        _context = context;
     }
 
     private async Task<string> GetUserIdAsync()
@@ -25,7 +27,17 @@ public class VisualizationsController : Controller
 
     public async Task<IActionResult> YearlySavingsChart()
     {
+        if (!User.Identity.IsAuthenticated)
+        {
+            return RedirectToAction("Login", "Account");
+        }
+
         var userId = await GetUserIdAsync();
+        if (userId == null)
+        {
+            return RedirectToAction("Login", "Account");
+        }
+
         var goals = await _savingGoalService.GetGoalsAsync(userId);
 
         var yearlySavings = goals
@@ -41,6 +53,7 @@ public class VisualizationsController : Controller
 
         return View(yearlySavings);
     }
+
 
     public IActionResult SpendingByCategoryChart(string month = "All", string year = "All")
     {
@@ -72,4 +85,38 @@ public class VisualizationsController : Controller
 
         return View(data);
     }
+
+    public async Task<IActionResult> MonthlyBalanceChart()
+    {
+        if (!User.Identity.IsAuthenticated)
+        {
+            return RedirectToAction("Login", "Account");
+        }
+
+        var userId = await GetUserIdAsync();
+        if (userId == null)
+        {
+            return RedirectToAction("Login", "Account");
+        }
+
+        var transactions = await _context.Transactions
+            .Where(t => t.UserId == userId)
+            .ToListAsync();
+
+        var monthlyBalances = transactions
+            .GroupBy(t => new { t.TransactionDateTime.Year, t.TransactionDateTime.Month })
+            .Select(g => new
+            {
+                Year = g.Key.Year,
+                Month = g.Key.Month,
+                Income = g.Where(t => t.Amount > 0).Sum(t => t.Amount),
+                Expenditure = g.Where(t => t.Amount < 0).Sum(t => t.Amount)
+            })
+            .OrderBy(g => g.Year)
+            .ThenBy(g => g.Month)
+            .ToList();
+
+        return View(monthlyBalances);
+    }
+
 }
