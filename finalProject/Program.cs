@@ -61,21 +61,30 @@ using (var scope = app.Services.CreateScope())
 
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error");
+    app.UseExceptionHandler("/Error");
+    app.UseStatusCodePagesWithReExecute("/Error/{0}");
     app.UseHsts();
 }
+else
+{
+    app.UseDeveloperExceptionPage();
+}
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseRouting();
 
-app.MapRazorPages();
+app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+
+app.MapRazorPages();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Dashboard}/{action=Index}/{id?}");
 
 app.Run();
+

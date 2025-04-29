@@ -35,7 +35,7 @@ else
                 <tr>
                     <td>@asset.Name</td>
                     <td>@asset.AssetType</td>
-                    <td>@asset.Value.ToString("C")</td>
+                    <td>@asset.Value.ToString("C", new System.Globalization.CultureInfo("bg-BG"))</td>
                     <td>@asset.DateAcquired?.ToShortDateString()</td>
                     <td>
                         <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@asset.Id">Edit</a>
@@ -49,3 +49,4 @@ else
         </tbody>
     </table>
 }
+
