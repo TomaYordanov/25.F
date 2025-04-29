@@ -6,7 +6,10 @@
 
 <h2>Monthly Balance (Income vs Expenditure)</h2>
 
-<canvas id="monthlyBalanceChart" width="800" height="400"></canvas>
+<a class="btn btn-secondary mb-3" asp-controller="Reports" asp-action="MonthlyBalance">← Back to Monthly Balance Report</a>
+
+
+<canvas id="MonthlyBalanceGraph" width="800" height="400"></canvas>
 
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -18,8 +21,8 @@
         const incomeData = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.Income)));
         const expenditureData = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => Math.Abs(x.Expenditure))));
 
-        const ctx = document.getElementById('monthlyBalanceChart').getContext('2d');
-        const monthlyBalanceChart = new Chart(ctx, {
+        const ctx = document.getElementById('MonthlyBalanceGraph').getContext('2d');
+        const MonthlyBalanceGraph = new Chart(ctx, {
             type: 'line',
             data: {
                 labels: labels,

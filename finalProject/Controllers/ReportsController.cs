@@ -33,7 +33,7 @@ namespace finalProject.Controllers
             }
 
             var data = transactions
-                .Where(t => t.Amount < 0) 
+                .Where(t => t.Amount < 0)
                 .GroupBy(t => t.Category.Name)
                 .Select(g => new
                 {
@@ -44,6 +44,26 @@ namespace finalProject.Controllers
 
             return View(data);
         }
+
+        public async Task<IActionResult> MonthlyBalance()
+        {
+            var data = await _context.Transactions
+                .GroupBy(t => new { t.TransactionDateTime.Year, t.TransactionDateTime.Month })
+                .Select(g => new
+                {
+                    Year = g.Key.Year,
+                    Month = g.Key.Month,
+                    Income = g.Where(t => t.Amount > 0).Sum(t => t.Amount),
+                    Expenditure = g.Where(t => t.Amount < 0).Sum(t => t.Amount),
+                    Balance = g.Sum(t => t.Amount)
+                })
+                .OrderByDescending(g => g.Year)
+                .ThenByDescending(g => g.Month)
+                .ToListAsync();
+
+            return View(data);
+        }
+
 
     }
 }

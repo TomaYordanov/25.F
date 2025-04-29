@@ -8,6 +8,11 @@
 
 <form asp-action="Edit" method="post">
     @Html.AntiForgeryToken()
+
+    @* Hidden fields *@
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="UserId" />
+
     <div class="form-group">
         <label asp-for="Name"></label>
         <input asp-for="Name" class="form-control" />
@@ -30,3 +35,4 @@
     </div>
     <button type="submit" class="btn btn-success mt-2">Save</button>
 </form>
+

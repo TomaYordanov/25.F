@@ -1,9 +1,0 @@
-﻿model decimal
-
-@{
-    var formatted = Model < 0
-        ? $"-${Math.Abs(Model):0.00}"
-        : $"${Model:0.00}";
-}
-
-<span>@formatted</span>

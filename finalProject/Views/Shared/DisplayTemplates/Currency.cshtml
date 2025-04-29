@@ -1,0 +1,8 @@
+﻿@model decimal
+
+@{
+    var bgCulture = new System.Globalization.CultureInfo("bg-BG");
+    string formatted = string.Format(bgCulture, "{0:C}", Model);
+}
+
+<span>@formatted</span>

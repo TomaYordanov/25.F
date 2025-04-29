@@ -38,6 +38,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" asp-area="" asp-controller="Reports" asp-action="SpendingByCategory">Spending by Category</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Reports" asp-action="MonthlyBalance">Monthly Balance</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -45,8 +46,9 @@
                                 Visualizations
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Visualizations" asp-action="MonthlyBalanceChart">Monthly Balance</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Visualizations" asp-action="MonthlyBalanceGraph">Monthly Balance</a></li>
                                 <li><a class="dropdown-item" asp-area="" asp-controller="Visualizations" asp-action="YearlySavingsChart">Yearly Savings</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Visualizations" asp-action="SpendingByCategoryChart">Spending by category</a></li>
                             </ul>
                         </li>
                     </ul>

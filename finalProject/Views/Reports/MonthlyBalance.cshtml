@@ -1,0 +1,35 @@
+﻿@model IEnumerable<dynamic>
+@using System.Globalization
+
+@{
+    ViewData["Title"] = "Monthly Balance Report";
+}
+
+<h2>Monthly Balance Report</h2>
+
+<a class="btn btn-info mb-3" asp-controller="Visualizations" asp-action="MonthlyBalanceGraph">📈 View Monthly Balance Graph</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Month</th>
+            <th>Income (лв.)</th>
+            <th>Expenditure (лв.)</th>
+            <th>Net Balance (лв.)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var formattedMonth = new DateTime(item.Year, item.Month, 1).ToString("MMMM yyyy", CultureInfo.InvariantCulture);
+            <tr>
+                <td>@formattedMonth</td>
+                <td>@item.Income.ToString("C")</td>
+                <td>@Math.Abs(item.Expenditure).ToString("C")</td>
+                <td class="@(item.Balance < 0 ? "text-danger" : "text-success")">
+                    @item.Balance.ToString("C")
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

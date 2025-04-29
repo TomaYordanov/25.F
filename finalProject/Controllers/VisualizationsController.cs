@@ -1,6 +1,7 @@
 ﻿using finalProject.Abstractions;
 using finalProject.Data;
 using finalProject.Models;
+using finalProject.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -28,22 +29,18 @@ public class VisualizationsController : Controller
     public async Task<IActionResult> YearlySavingsChart()
     {
         if (!User.Identity.IsAuthenticated)
-        {
             return RedirectToAction("Login", "Account");
-        }
 
         var userId = await GetUserIdAsync();
         if (userId == null)
-        {
             return RedirectToAction("Login", "Account");
-        }
 
         var goals = await _savingGoalService.GetGoalsAsync(userId);
 
         var yearlySavings = goals
             .Where(g => g.Deadline.HasValue)
             .GroupBy(g => g.Deadline.Value.Year)
-            .Select(g => new
+            .Select(g => new YearlySavingsViewModel
             {
                 Year = g.Key,
                 TotalSaved = g.Sum(goal => goal.CurrentAmount)
@@ -86,7 +83,7 @@ public class VisualizationsController : Controller
         return View(data);
     }
 
-    public async Task<IActionResult> MonthlyBalanceChart()
+    public async Task<IActionResult> MonthlyBalanceGraph()
     {
         if (!User.Identity.IsAuthenticated)
         {
