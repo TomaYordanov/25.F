@@ -1,0 +1,45 @@
+﻿@model FinScope.ViewModels.ForecastResultViewModel
+
+@{
+    ViewData["Title"] = "Transaction Forecast";
+}
+
+<h2>Transaction Forecast</h2>
+
+<canvas id="forecastChart" width="800" height="400"></canvas>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('forecastChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.ForecastData.Keys.Select(d => d.ToShortDateString()))),
+                datasets: [{
+                    label: 'Forecasted Amount',
+                    data: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.ForecastData.Values)),
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true
+                    },
+                    tooltip: {
+                        enabled: true
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    }
+                }
+            }
+        });
+    </script>
+}

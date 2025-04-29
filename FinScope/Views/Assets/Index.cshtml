@@ -1,0 +1,52 @@
+﻿@model IEnumerable<FinScope.Models.Asset>
+
+@{
+    ViewData["Title"] = "Your Assets";
+}
+
+<h2>Your Assets</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<a class="btn btn-primary mb-3" asp-action="Create">Add New Asset</a>
+
+@if (!Model.Any())
+{
+    <p>No assets found.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Value</th>
+                <th>Date Acquired</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var asset in Model)
+            {
+                <tr>
+                    <td>@asset.Name</td>
+                    <td>@asset.AssetType</td>
+                    <td>@asset.Value.ToString("C", new System.Globalization.CultureInfo("bg-BG"))</td>
+                    <td>@asset.DateAcquired?.ToShortDateString()</td>
+                    <td>
+                        <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@asset.Id">Edit</a>
+                        <form asp-action="Delete" asp-route-id="@asset.Id" method="post" style="display:inline;">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+

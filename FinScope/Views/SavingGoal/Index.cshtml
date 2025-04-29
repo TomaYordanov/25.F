@@ -1,0 +1,46 @@
+﻿@model IEnumerable<FinScope.Models.SavingGoal>
+
+@{
+    ViewData["Title"] = "My Saving Goals";
+}
+
+<h2>My Saving Goals</h2>
+
+<a class="btn btn-primary mb-3" asp-action="Create">+ Add New Goal</a>
+<a class="btn btn-info mb-3" asp-controller="Visualizations" asp-action="YearlySavingsChart">View Yearly Savings Chart</a>
+<div class="row">
+    @foreach (var goal in Model)
+    {
+        var progress = goal.TargetAmount > 0 ? (goal.CurrentAmount / goal.TargetAmount) * 100 : 0;
+        progress = progress > 100 ? 100 : progress; // Cap at 100%
+        var isComplete = goal.IsCompleted || progress == 100;
+        <div class="col-md-6 mb-4">
+            <div class="card @(isComplete ? "border-success" : "border-primary")">
+                <div class="card-body">
+                    <h5 class="card-title">@goal.Title</h5>
+                    <p class="card-text">Target: @goal.TargetAmount.ToString("C", new System.Globalization.CultureInfo("bg-BG"))</p>
+                    <p class="card-text">Saved: @goal.CurrentAmount.ToString("C", new System.Globalization.CultureInfo("bg-BG"))</p>
+
+                    @if (goal.Deadline.HasValue)
+                    {
+                        <p class="card-text"><small class="text-muted">Deadline: @goal.Deadline.Value.ToShortDateString()</small></p>
+                    }
+
+                    <div class="progress mb-2">
+                        <div class="progress-bar @(isComplete ? "bg-success" : "bg-primary")" role="progressbar" style="width: @progress%" aria-valuenow="@progress" aria-valuemin="0" aria-valuemax="100">
+                            @progress.ToString("0")%
+                        </div>
+                    </div>
+
+                    <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@goal.Id">Edit</a>
+
+                    <form asp-action="Delete" asp-route-id="@goal.Id" method="post" class="d-inline">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this goal?');">Delete</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    }
+</div>
