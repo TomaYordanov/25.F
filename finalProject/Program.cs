@@ -17,10 +17,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
-        options.LoginPath = "/Identity/Account/Register"; 
-        options.AccessDeniedPath = "/Identity/Account/AccessDenied"; 
+        options.LoginPath = "/Identity/Account/Login";
+        options.AccessDeniedPath = "/Error/401";
     });
-
 
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => {
     options.SignIn.RequireConfirmedAccount = false;
@@ -30,7 +29,7 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => {
 
 builder.Services.AddRazorPages();
 
-// Register your services
+// Register services
 builder.Services.AddScoped<ITransactionService, TransactionService>();
 builder.Services.AddScoped<IDashboardService, DashboardService>();
 builder.Services.AddScoped<ISavingGoalService, SavingGoalService>();
@@ -50,7 +49,7 @@ using (var scope = app.Services.CreateScope())
     try
     {
         var seeder = services.GetRequiredService<UserSeedService>();
-        await seeder.SeedDefaultUserAsync();
+        await seeder.SeedUsers();
     }
     catch (Exception ex)
     {
@@ -62,14 +61,13 @@ using (var scope = app.Services.CreateScope())
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    app.UseStatusCodePagesWithReExecute("/Error/{0}");
+    app.UseStatusCodePagesWithReExecute("/Error/{0}"); 
     app.UseHsts();
 }
 else
 {
     app.UseDeveloperExceptionPage();
 }
-
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -79,7 +77,6 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-
 app.MapRazorPages();
 
 app.MapControllerRoute(
@@ -87,4 +84,3 @@ app.MapControllerRoute(
     pattern: "{controller=Dashboard}/{action=Index}/{id?}");
 
 app.Run();
-

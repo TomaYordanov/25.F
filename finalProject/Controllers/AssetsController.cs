@@ -49,8 +49,9 @@ public class AssetsController : Controller
             TempData["Success"] = "Asset added successfully!";
             return RedirectToAction(nameof(Index));
         }
-        return View(asset);
+        return View(asset); 
     }
+
 
     [HttpGet]
     public async Task<IActionResult> Edit(int id)
@@ -74,8 +75,9 @@ public class AssetsController : Controller
             TempData["Success"] = "Asset updated successfully!";
             return RedirectToAction(nameof(Index));
         }
-        return View(asset);
+        return View(asset); 
     }
+
 
     [HttpPost]
     [ValidateAntiForgeryToken]

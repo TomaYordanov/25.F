@@ -3,20 +3,152 @@
   "WorkspaceRootPath": "C:\\Users\\Toma\\source\\repos\\finalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\admin\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\admin\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\viewmodels\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\viewmodels\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\viewmodels\\usersviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\viewmodels\\usersviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\assets\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\assets\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\assets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\assets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\controllers\\assetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\controllers\\assetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\visualizations\\spendingbycategorychart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\visualizations\\spendingbycategorychart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\services\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\services\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\controllers\\visualizationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\controllers\\visualizationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\models\\asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\models\\asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\savinggoal\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\savinggoal\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\models\\savinggoal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\models\\savinggoal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\controllers\\savinggoalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\controllers\\savinggoalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Migrations\\20250429163812_migrateNewStuff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:finalProject\\Migrations\\20250429163812_migrateNewStuff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\savinggoal\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\savinggoal\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\savinggoal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\savinggoal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\assets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\assets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\reports\\monthlybalance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\reports\\monthlybalance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\services\\userseedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\services\\userseedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\error\\error401.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\error\\error401.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\viewmodels\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\viewmodels\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\error\\error500.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -39,28 +171,12 @@
       "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\error\\error403.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\savinggoal\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\savinggoal\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\savinggoal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\savinggoal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\models\\recurringtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\models\\recurringtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{02CEFF52-D522-479B-AC05-9159144EFC76}|finalProject.Tests\\finalProject.Tests.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject.tests\\services\\transactionservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02CEFF52-D522-479B-AC05-9159144EFC76}|finalProject.Tests\\finalProject.Tests.csproj|solutionrelative:finalproject.tests\\services\\transactionservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\assets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\assets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\shared\\displaytemplates\\currency.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -71,20 +187,12 @@
       "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\reports\\spendingbycategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\reports\\monthlybalance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\reports\\monthlybalance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\reports\\averagemonthlybalance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\reports\\averagemonthlybalance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\visualizations\\yearlysavingschart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\visualizations\\yearlysavingschart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\visualizations\\spendingbycategorychart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\visualizations\\spendingbycategorychart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\visualizations\\monthlybalancegraph.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -99,64 +207,12 @@
       "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\controllers\\visualizationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\controllers\\visualizationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\controllers\\savinggoalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\controllers\\savinggoalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\viewmodels\\yearlysavingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\viewmodels\\yearlysavingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\models\\savinggoal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\models\\savinggoal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\controllers\\assetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\controllers\\assetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\assets\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\assets\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\models\\asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\models\\asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\services\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\services\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\assets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\assets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\services\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -167,24 +223,12 @@
       "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\services\\savinggoalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\savinggoal\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\savinggoal\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\abstractions\\isavinggoalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\abstractions\\isavinggoalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\migrations\\20250428121546_testmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -211,24 +255,8 @@
       "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\services\\spreadsheetimportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\services\\userseedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\services\\userseedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\viewmodels\\transactionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -283,10 +311,6 @@
       "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|c:\\users\\toma\\source\\repos\\finalproject\\finalproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{567260E2-097C-41F1-A9E8-8DA1B8995EA6}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -317,24 +341,193 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Error.cshtml",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Error\\Error.cshtml",
-              "RelativeDocumentMoniker": "finalProject\\Views\\Error\\Error.cshtml",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Error\\Error.cshtml",
-              "RelativeToolTip": "finalProject\\Views\\Error\\Error.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "DocumentIndex": 11,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "finalProject\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAADUAAAAAAAAAAAAiwEQAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-20T10:54:26.005Z",
+              "WhenOpened": "2025-04-21T18:23:15.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AssetsController.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\AssetsController.cs",
+              "RelativeDocumentMoniker": "finalProject\\Controllers\\AssetsController.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\AssetsController.cs",
+              "RelativeToolTip": "finalProject\\Controllers\\AssetsController.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAgwBYAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T21:34:46.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsersViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\ViewModels\\UsersViewModel.cs",
+              "RelativeDocumentMoniker": "finalProject\\ViewModels\\UsersViewModel.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\ViewModels\\UsersViewModel.cs",
+              "RelativeToolTip": "finalProject\\ViewModels\\UsersViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T17:29:45.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EditUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Admin\\EditUser.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Views\\Admin\\EditUser.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Admin\\EditUser.cshtml",
+              "RelativeToolTip": "finalProject\\Views\\Admin\\EditUser.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-29T17:33:46.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Assets\\Index.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Views\\Assets\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Assets\\Index.cshtml",
+              "RelativeToolTip": "finalProject\\Views\\Assets\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-28T21:35:32.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Assets\\Edit.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Views\\Assets\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Assets\\Edit.cshtml",
+              "RelativeToolTip": "finalProject\\Views\\Assets\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-28T21:36:39.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "finalProject\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "finalProject\\Controllers\\DashboardController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAYwE0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T18:55:24.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Program.cs",
+              "RelativeDocumentMoniker": "finalProject\\Program.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Program.cs",
+              "RelativeToolTip": "finalProject\\Program.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAA4AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T17:28:49.152Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Users.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Admin\\Users.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Views\\Admin\\Users.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Admin\\Users.cshtml",
+              "RelativeToolTip": "finalProject\\Views\\Admin\\Users.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAsAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-29T18:56:06.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "finalProject\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "finalProject\\Models\\ApplicationUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T12:58:23.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "finalProject\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "finalProject\\Controllers\\AdminController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T15:35:57.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "finalProject\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-29T15:36:30.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SpendingByCategoryChart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Visualizations\\SpendingByCategoryChart.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Views\\Visualizations\\SpendingByCategoryChart.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Visualizations\\SpendingByCategoryChart.cshtml",
+              "RelativeToolTip": "finalProject\\Views\\Visualizations\\SpendingByCategoryChart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-28T05:06:17.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DashboardService.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Services\\DashboardService.cs",
+              "RelativeDocumentMoniker": "finalProject\\Services\\DashboardService.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Services\\DashboardService.cs",
+              "RelativeToolTip": "finalProject\\Services\\DashboardService.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAYwEcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T12:27:32.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "ErrorController.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\ErrorController.cs",
               "RelativeDocumentMoniker": "finalProject\\Controllers\\ErrorController.cs",
@@ -347,98 +540,254 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\SavingGoal\\Index.cshtml",
-              "RelativeDocumentMoniker": "finalProject\\Views\\SavingGoal\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\SavingGoal\\Index.cshtml",
-              "RelativeToolTip": "finalProject\\Views\\SavingGoal\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-28T11:56:39.517Z",
+              "DocumentIndex": 15,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "finalProject\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "finalProject\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAiwFUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T10:10:12.251Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeToolTip": "finalProject\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-27T18:48:03.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\SavingGoal\\Edit.cshtml",
               "RelativeDocumentMoniker": "finalProject\\Views\\SavingGoal\\Edit.cshtml",
               "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\SavingGoal\\Edit.cshtml",
               "RelativeToolTip": "finalProject\\Views\\SavingGoal\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAA+AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-28T12:02:10.836Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Error400.cshtml",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Error\\Error400.cshtml",
-              "RelativeDocumentMoniker": "finalProject\\Views\\Error\\Error400.cshtml",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Error\\Error400.cshtml",
-              "RelativeToolTip": "finalProject\\Views\\Error\\Error400.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "DocumentIndex": 24,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\SavingGoal\\Create.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Views\\SavingGoal\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\SavingGoal\\Create.cshtml",
+              "RelativeToolTip": "finalProject\\Views\\SavingGoal\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAcwCoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T14:32:59.609Z",
+              "WhenOpened": "2025-04-28T12:01:53.044Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\ViewModels\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "finalProject\\ViewModels\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\ViewModels\\ErrorViewModel.cs",
-              "RelativeToolTip": "finalProject\\ViewModels\\ErrorViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "DocumentIndex": 21,
+              "Title": "SavingGoalController.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\SavingGoalController.cs",
+              "RelativeDocumentMoniker": "finalProject\\Controllers\\SavingGoalController.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\SavingGoalController.cs",
+              "RelativeToolTip": "finalProject\\Controllers\\SavingGoalController.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAswFQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T14:31:14.821Z",
+              "WhenOpened": "2025-04-28T11:49:25.947Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Program.cs",
-              "RelativeDocumentMoniker": "finalProject\\Program.cs",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Program.cs*",
-              "RelativeToolTip": "finalProject\\Program.cs*",
-              "ViewState": "AQIAADAAAAAAAAAAAAAiwEMAAAAEAAAA",
+              "DocumentIndex": 25,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\SavingGoal\\Index.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Views\\SavingGoal\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\SavingGoal\\Index.cshtml",
+              "RelativeToolTip": "finalProject\\Views\\SavingGoal\\Index.cshtml",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAcwC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-28T11:56:39.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "SavingGoal.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\SavingGoal.cs",
+              "RelativeDocumentMoniker": "finalProject\\Models\\SavingGoal.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\SavingGoal.cs",
+              "RelativeToolTip": "finalProject\\Models\\SavingGoal.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T17:28:49.152Z",
+              "WhenOpened": "2025-04-27T11:44:04.355Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Error401.cshtml",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Error\\Error401.cshtml",
-              "RelativeDocumentMoniker": "finalProject\\Views\\Error\\Error401.cshtml",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Error\\Error401.cshtml",
-              "RelativeToolTip": "finalProject\\Views\\Error\\Error401.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "DocumentIndex": 17,
+              "Title": "VisualizationsController.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\VisualizationsController.cs",
+              "RelativeDocumentMoniker": "finalProject\\Controllers\\VisualizationsController.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\VisualizationsController.cs",
+              "RelativeToolTip": "finalProject\\Controllers\\VisualizationsController.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAUwCgAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T05:13:52.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Asset.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\Asset.cs",
+              "RelativeDocumentMoniker": "finalProject\\Models\\Asset.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\Asset.cs",
+              "RelativeToolTip": "finalProject\\Models\\Asset.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T11:44:30.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "20250429163812_migrateNewStuff.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Migrations\\20250429163812_migrateNewStuff.cs",
+              "RelativeDocumentMoniker": "finalProject\\Migrations\\20250429163812_migrateNewStuff.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Migrations\\20250429163812_migrateNewStuff.cs",
+              "RelativeToolTip": "finalProject\\Migrations\\20250429163812_migrateNewStuff.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T16:38:12.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "finalProject\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T14:35:02.031Z",
+              "WhenOpened": "2025-04-21T18:23:17.118Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Error403.cshtml",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Error\\Error403.cshtml",
-              "RelativeDocumentMoniker": "finalProject\\Views\\Error\\Error403.cshtml",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Error\\Error403.cshtml",
-              "RelativeToolTip": "finalProject\\Views\\Error\\Error403.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "DocumentIndex": 27,
+              "Title": "Account.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\Account.cs",
+              "RelativeDocumentMoniker": "finalProject\\Models\\Account.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\Account.cs",
+              "RelativeToolTip": "finalProject\\Models\\Account.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T12:55:09.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Assets\\Create.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Views\\Assets\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Assets\\Create.cshtml",
+              "RelativeToolTip": "finalProject\\Views\\Assets\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T14:47:44.052Z",
+              "WhenOpened": "2025-04-28T21:36:14.301Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 28,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\Transaction.cs",
+              "RelativeDocumentMoniker": "finalProject\\Models\\Transaction.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\Transaction.cs",
+              "RelativeToolTip": "finalProject\\Models\\Transaction.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAArwBoAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T12:26:38.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "TransactionsController.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\TransactionsController.cs",
+              "RelativeDocumentMoniker": "finalProject\\Controllers\\TransactionsController.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\TransactionsController.cs",
+              "RelativeToolTip": "finalProject\\Controllers\\TransactionsController.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowBIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T18:58:04.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ReportsController.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\ReportsController.cs",
+              "RelativeDocumentMoniker": "finalProject\\Controllers\\ReportsController.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\ReportsController.cs",
+              "RelativeToolTip": "finalProject\\Controllers\\ReportsController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBkAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T19:00:35.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "MonthlyBalance.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Reports\\MonthlyBalance.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Views\\Reports\\MonthlyBalance.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Reports\\MonthlyBalance.cshtml",
+              "RelativeToolTip": "finalProject\\Views\\Reports\\MonthlyBalance.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-29T11:31:28.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "finalProject\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-27T18:40:33.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "finalProject\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-22T12:36:53.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
               "Title": "Error404.cshtml",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Error\\Error404.cshtml",
               "RelativeDocumentMoniker": "finalProject\\Views\\Error\\Error404.cshtml",
@@ -451,7 +800,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 41,
+              "Title": "Error403.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Error\\Error403.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Views\\Error\\Error403.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Error\\Error403.cshtml",
+              "RelativeToolTip": "finalProject\\Views\\Error\\Error403.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-29T14:47:44.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Error401.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Error\\Error401.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Views\\Error\\Error401.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Error\\Error401.cshtml",
+              "RelativeToolTip": "finalProject\\Views\\Error\\Error401.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-29T14:35:02.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\ViewModels\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "finalProject\\ViewModels\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\ViewModels\\ErrorViewModel.cs",
+              "RelativeToolTip": "finalProject\\ViewModels\\ErrorViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T14:31:14.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Error400.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Error\\Error400.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Views\\Error\\Error400.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Error\\Error400.cshtml",
+              "RelativeToolTip": "finalProject\\Views\\Error\\Error400.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-29T14:32:59.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
               "Title": "Error500.cshtml",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Error\\Error500.cshtml",
               "RelativeDocumentMoniker": "finalProject\\Views\\Error\\Error500.cshtml",
@@ -464,7 +865,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 34,
+              "Title": "UserSeedService.cs",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Services\\UserSeedService.cs",
+              "RelativeDocumentMoniker": "finalProject\\Services\\UserSeedService.cs",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Services\\UserSeedService.cs",
+              "RelativeToolTip": "finalProject\\Services\\UserSeedService.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAiwB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T16:28:06.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Error\\Error.cshtml",
+              "RelativeDocumentMoniker": "finalProject\\Views\\Error\\Error.cshtml",
+              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Error\\Error.cshtml",
+              "RelativeToolTip": "finalProject\\Views\\Error\\Error.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-20T10:54:26.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
               "Title": "TransactionServiceTests.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject.Tests\\Services\\TransactionServiceTests.cs",
               "RelativeDocumentMoniker": "finalProject.Tests\\Services\\TransactionServiceTests.cs",
@@ -477,31 +904,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "finalProject\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "finalProject\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAABEAAAAAAAAAAAAkwCMAAABcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-21T18:23:15.82Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "SpendingByCategoryChart.cshtml",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Visualizations\\SpendingByCategoryChart.cshtml",
-              "RelativeDocumentMoniker": "finalProject\\Views\\Visualizations\\SpendingByCategoryChart.cshtml",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Visualizations\\SpendingByCategoryChart.cshtml",
-              "RelativeToolTip": "finalProject\\Views\\Visualizations\\SpendingByCategoryChart.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-28T05:06:17.085Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 47,
               "Title": "YearlySavingsChart.cshtml",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Visualizations\\YearlySavingsChart.cshtml",
               "RelativeDocumentMoniker": "finalProject\\Views\\Visualizations\\YearlySavingsChart.cshtml",
@@ -513,20 +916,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Assets\\Index.cshtml",
-              "RelativeDocumentMoniker": "finalProject\\Views\\Assets\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Assets\\Index.cshtml",
-              "RelativeToolTip": "finalProject\\Views\\Assets\\Index.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAADQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-28T21:35:32.847Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 42,
               "Title": "RecurringTransaction.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\RecurringTransaction.cs",
               "RelativeDocumentMoniker": "finalProject\\Models\\RecurringTransaction.cs",
@@ -539,7 +929,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 46,
               "Title": "AverageMonthlyBalance.cshtml",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Reports\\AverageMonthlyBalance.cshtml",
               "RelativeDocumentMoniker": "finalProject\\Views\\Reports\\AverageMonthlyBalance.cshtml",
@@ -551,7 +941,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 44,
               "Title": "Currency.cshtml",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Shared\\DisplayTemplates\\Currency.cshtml",
               "RelativeDocumentMoniker": "finalProject\\Views\\Shared\\DisplayTemplates\\Currency.cshtml",
@@ -563,7 +953,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 45,
               "Title": "SpendingByCategory.cshtml",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Reports\\SpendingByCategory.cshtml",
               "RelativeDocumentMoniker": "finalProject\\Views\\Reports\\SpendingByCategory.cshtml",
@@ -575,19 +965,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "MonthlyBalance.cshtml",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Reports\\MonthlyBalance.cshtml",
-              "RelativeDocumentMoniker": "finalProject\\Views\\Reports\\MonthlyBalance.cshtml",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Reports\\MonthlyBalance.cshtml",
-              "RelativeToolTip": "finalProject\\Views\\Reports\\MonthlyBalance.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T11:31:28.938Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 48,
               "Title": "MonthlyBalanceGraph.cshtml",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Visualizations\\MonthlyBalanceGraph.cshtml",
               "RelativeDocumentMoniker": "finalProject\\Views\\Visualizations\\MonthlyBalanceGraph.cshtml",
@@ -599,7 +977,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 49,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Transactions\\Index.cshtml",
               "RelativeDocumentMoniker": "finalProject\\Views\\Transactions\\Index.cshtml",
@@ -611,7 +989,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 50,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Dashboard\\Index.cshtml",
               "RelativeDocumentMoniker": "finalProject\\Views\\Dashboard\\Index.cshtml",
@@ -623,80 +1001,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "VisualizationsController.cs",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\VisualizationsController.cs",
-              "RelativeDocumentMoniker": "finalProject\\Controllers\\VisualizationsController.cs",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\VisualizationsController.cs",
-              "RelativeToolTip": "finalProject\\Controllers\\VisualizationsController.cs",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAQwFUAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T05:13:52.815Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "TransactionsController.cs",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\TransactionsController.cs",
-              "RelativeDocumentMoniker": "finalProject\\Controllers\\TransactionsController.cs",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\TransactionsController.cs",
-              "RelativeToolTip": "finalProject\\Controllers\\TransactionsController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAowBIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T18:58:04.595Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ReportsController.cs",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\ReportsController.cs",
-              "RelativeDocumentMoniker": "finalProject\\Controllers\\ReportsController.cs",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\ReportsController.cs",
-              "RelativeToolTip": "finalProject\\Controllers\\ReportsController.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAiwDQAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T19:00:35.055Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "SavingGoalController.cs",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\SavingGoalController.cs",
-              "RelativeDocumentMoniker": "finalProject\\Controllers\\SavingGoalController.cs",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\SavingGoalController.cs",
-              "RelativeToolTip": "finalProject\\Controllers\\SavingGoalController.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAqwFQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T11:49:25.947Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Assets\\Edit.cshtml",
-              "RelativeDocumentMoniker": "finalProject\\Views\\Assets\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Assets\\Edit.cshtml",
-              "RelativeToolTip": "finalProject\\Views\\Assets\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-28T21:36:39.792Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "finalProject\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "finalProject\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAgwFUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T10:10:12.251Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 51,
               "Title": "YearlySavingsViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\ViewModels\\YearlySavingsViewModel.cs",
               "RelativeDocumentMoniker": "finalProject\\ViewModels\\YearlySavingsViewModel.cs",
@@ -708,79 +1013,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "finalProject\\Models\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "finalProject\\Models\\ApplicationUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T12:58:23.613Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "SavingGoal.cs",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\SavingGoal.cs",
-              "RelativeDocumentMoniker": "finalProject\\Models\\SavingGoal.cs",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\SavingGoal.cs",
-              "RelativeToolTip": "finalProject\\Models\\SavingGoal.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T11:44:04.355Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "AssetsController.cs",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\AssetsController.cs",
-              "RelativeDocumentMoniker": "finalProject\\Controllers\\AssetsController.cs",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\AssetsController.cs",
-              "RelativeToolTip": "finalProject\\Controllers\\AssetsController.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAArwEoAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T21:34:46.238Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Asset.cs",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\Asset.cs",
-              "RelativeDocumentMoniker": "finalProject\\Models\\Asset.cs",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\Asset.cs",
-              "RelativeToolTip": "finalProject\\Models\\Asset.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T11:44:30.407Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "DashboardService.cs",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Services\\DashboardService.cs",
-              "RelativeDocumentMoniker": "finalProject\\Services\\DashboardService.cs",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Services\\DashboardService.cs",
-              "RelativeToolTip": "finalProject\\Services\\DashboardService.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAQwHcAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T12:27:32.659Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "finalProject\\Controllers\\DashboardController.cs",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "finalProject\\Controllers\\DashboardController.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAQwHEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T18:55:24.782Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 52,
               "Title": "DashboardViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\ViewModels\\DashboardViewModel.cs",
               "RelativeDocumentMoniker": "finalProject\\ViewModels\\DashboardViewModel.cs",
@@ -792,19 +1025,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Assets\\Create.cshtml",
-              "RelativeDocumentMoniker": "finalProject\\Views\\Assets\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Assets\\Create.cshtml",
-              "RelativeToolTip": "finalProject\\Views\\Assets\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-28T21:36:14.301Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 53,
               "Title": "TransactionService.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Services\\TransactionService.cs",
               "RelativeDocumentMoniker": "finalProject\\Services\\TransactionService.cs",
@@ -816,7 +1037,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 54,
               "Title": "SavingGoalService.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Services\\SavingGoalService.cs",
               "RelativeDocumentMoniker": "finalProject\\Services\\SavingGoalService.cs",
@@ -828,19 +1049,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\SavingGoal\\Create.cshtml",
-              "RelativeDocumentMoniker": "finalProject\\Views\\SavingGoal\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\SavingGoal\\Create.cshtml",
-              "RelativeToolTip": "finalProject\\Views\\SavingGoal\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-28T12:01:53.044Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 55,
               "Title": "ISavingGoalService.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Abstractions\\ISavingGoalService.cs",
               "RelativeDocumentMoniker": "finalProject\\Abstractions\\ISavingGoalService.cs",
@@ -852,7 +1061,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 56,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\Category.cs",
               "RelativeDocumentMoniker": "finalProject\\Models\\Category.cs",
@@ -864,19 +1073,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "Account.cs",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\Account.cs",
-              "RelativeDocumentMoniker": "finalProject\\Models\\Account.cs",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\Account.cs",
-              "RelativeToolTip": "finalProject\\Models\\Account.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T12:55:09.261Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 82,
               "Title": "20250428124432_fixedSavingGoals.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Migrations\\20250428124432_fixedSavingGoals.cs",
               "RelativeDocumentMoniker": "finalProject\\Migrations\\20250428124432_fixedSavingGoals.cs",
@@ -888,19 +1085,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "Transaction.cs",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\Transaction.cs",
-              "RelativeDocumentMoniker": "finalProject\\Models\\Transaction.cs",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Models\\Transaction.cs",
-              "RelativeToolTip": "finalProject\\Models\\Transaction.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAArwBoAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T12:26:38.336Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 57,
               "Title": "20250428121546_testmigration.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Migrations\\20250428121546_testmigration.cs",
               "RelativeDocumentMoniker": "finalProject\\Migrations\\20250428121546_testmigration.cs",
@@ -912,7 +1097,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 59,
               "Title": "_ManualTransactionForm.cshtml",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Transactions\\_ManualTransactionForm.cshtml",
               "RelativeDocumentMoniker": "finalProject\\Views\\Transactions\\_ManualTransactionForm.cshtml",
@@ -924,7 +1109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 58,
               "Title": "TransactionIndexViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\ViewModels\\TransactionIndexViewModel.cs",
               "RelativeDocumentMoniker": "finalProject\\ViewModels\\TransactionIndexViewModel.cs",
@@ -936,7 +1121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 60,
               "Title": "20250427193118_newmigration.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Migrations\\20250427193118_newmigration.cs",
               "RelativeDocumentMoniker": "finalProject\\Migrations\\20250427193118_newmigration.cs",
@@ -948,7 +1133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 62,
               "Title": "SpreadsheetImportService.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Services\\SpreadsheetImportService.cs",
               "RelativeDocumentMoniker": "finalProject\\Services\\SpreadsheetImportService.cs",
@@ -960,7 +1145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 61,
               "Title": "ITransactionService.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Abstractions\\ITransactionService.cs",
               "RelativeDocumentMoniker": "finalProject\\Abstractions\\ITransactionService.cs",
@@ -972,7 +1157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 63,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "finalProject\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
@@ -984,7 +1169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 64,
               "Title": "TransactionViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\ViewModels\\TransactionViewModel.cs",
               "RelativeDocumentMoniker": "finalProject\\ViewModels\\TransactionViewModel.cs",
@@ -996,55 +1181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "UserSeedService.cs",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Services\\UserSeedService.cs",
-              "RelativeDocumentMoniker": "finalProject\\Services\\UserSeedService.cs",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Services\\UserSeedService.cs",
-              "RelativeToolTip": "finalProject\\Services\\UserSeedService.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCIAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T16:28:06.667Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "finalProject\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeToolTip": "finalProject\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAYwCoAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-27T18:40:33.336Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "Logout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "RelativeDocumentMoniker": "finalProject\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "RelativeToolTip": "finalProject\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-27T18:48:03.715Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "finalProject\\Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "finalProject\\Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-22T12:36:53.447Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 66,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "finalProject\\wwwroot\\js\\site.js",
@@ -1056,7 +1193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 65,
               "Title": "IDashboardService.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Abstractions\\IDashboardService.cs",
               "RelativeDocumentMoniker": "finalProject\\Abstractions\\IDashboardService.cs",
@@ -1068,7 +1205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 67,
               "Title": "ScaffoldingReadMe.txt",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\ScaffoldingReadMe.txt",
               "RelativeDocumentMoniker": "finalProject\\ScaffoldingReadMe.txt",
@@ -1080,7 +1217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 72,
               "Title": "bootstrap.css",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
               "RelativeDocumentMoniker": "finalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
@@ -1092,7 +1229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 71,
               "Title": "bootstrap-grid.css",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
               "RelativeDocumentMoniker": "finalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
@@ -1104,7 +1241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 70,
               "Title": "bootstrap-utilities.css",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
               "RelativeDocumentMoniker": "finalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
@@ -1116,7 +1253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 69,
               "Title": "bootstrap.js",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
               "RelativeDocumentMoniker": "finalProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
@@ -1128,7 +1265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 73,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "finalProject\\wwwroot\\css\\site.css",
@@ -1140,7 +1277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 68,
               "Title": "finalProject.csproj",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\finalProject.csproj",
               "RelativeDocumentMoniker": "finalProject\\finalProject.csproj",
@@ -1152,7 +1289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 81,
               "Title": "20250426150131_newest.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Migrations\\20250426150131_newest.cs",
               "RelativeDocumentMoniker": "finalProject\\Migrations\\20250426150131_newest.cs",
@@ -1164,7 +1301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 74,
               "Title": "20250426150102_newest.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Migrations\\20250426150102_newest.cs",
               "RelativeDocumentMoniker": "finalProject\\Migrations\\20250426150102_newest.cs",
@@ -1175,7 +1312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 76,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "finalProject\\Views\\_ViewImports.cshtml",
@@ -1187,7 +1324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 75,
               "Title": "20250424193248_initial.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Migrations\\20250424193248_initial.cs",
               "RelativeDocumentMoniker": "finalProject\\Migrations\\20250424193248_initial.cs",
@@ -1198,19 +1335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "finalProject\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "finalProject\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-21T18:23:17.118Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 77,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\appsettings.json",
               "RelativeDocumentMoniker": "finalProject\\appsettings.json",
@@ -1222,7 +1347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 78,
               "Title": "readme.txt",
               "DocumentMoniker": "C:\\Users\\Toma\\.nuget\\packages\\epplus\\8.0.2\\readme.txt",
               "RelativeDocumentMoniker": "..\\..\\..\\.nuget\\packages\\epplus\\8.0.2\\readme.txt",
@@ -1234,7 +1359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 80,
               "Title": "20241229174119_inital.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Migrations\\20241229174119_inital.cs",
               "RelativeDocumentMoniker": "finalProject\\Migrations\\20241229174119_inital.cs",
@@ -1245,7 +1370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 79,
               "Title": "20241229174738_inital.cs",
               "DocumentMoniker": "C:\\Users\\Toma\\source\\repos\\finalProject\\finalProject\\Migrations\\20241229174738_inital.cs",
               "RelativeDocumentMoniker": "finalProject\\Migrations\\20241229174738_inital.cs",

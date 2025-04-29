@@ -53,7 +53,7 @@ namespace finalProject.Controllers
                     return RedirectToAction("Login", "Account");
                 }
 
-                if (!ModelState.IsValid)
+                if (ModelState.ErrorCount > 1)
                 {
                     TempData["Error"] = "Invalid account details.";
                     return RedirectToAction("Index");

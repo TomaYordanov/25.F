@@ -372,3 +372,4 @@ C:\Users\Toma\source\repos\finalProject\finalProject.Tests\obj\Debug\net6.0\refi
 C:\Users\Toma\source\repos\finalProject\finalProject.Tests\obj\Debug\net6.0\finalProject.Tests.pdb
 C:\Users\Toma\source\repos\finalProject\finalProject.Tests\obj\Debug\net6.0\finalProject.Tests.genruntimeconfig.cache
 C:\Users\Toma\source\repos\finalProject\finalProject.Tests\obj\Debug\net6.0\ref\finalProject.Tests.dll
+C:\Users\Toma\source\repos\finalProject\finalProject.Tests\obj\Debug\net6.0\finalProject.Tests.sourcelink.json

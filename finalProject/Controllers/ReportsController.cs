@@ -1,4 +1,6 @@
 ﻿using finalProject.Data;
+using finalProject.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
@@ -8,16 +10,20 @@ namespace finalProject.Controllers
     public class ReportsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public ReportsController(ApplicationDbContext context)
+        public ReportsController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
-
-        public IActionResult SpendingByCategory(string month = "All", string year = "All")
+        public async Task<IActionResult> SpendingByCategory(string month = "All", string year = "All")
         {
+            var user = await _userManager.GetUserAsync(User);
+
             var transactions = _context.Transactions
                 .Include(t => t.Category)
+                .Where(t => t.UserId == user.Id) 
                 .AsQueryable();
 
             if (int.TryParse(month, out int monthNumber) && monthNumber >= 1 && monthNumber <= 12)
@@ -32,7 +38,7 @@ namespace finalProject.Controllers
                     .Where(t => t.TransactionDateTime.Year == yearNumber);
             }
 
-            var data = transactions
+            var data = await transactions
                 .Where(t => t.Amount < 0)
                 .GroupBy(t => t.Category.Name)
                 .Select(g => new
@@ -40,14 +46,18 @@ namespace finalProject.Controllers
                     Category = g.Key,
                     Total = g.Sum(t => t.Amount)
                 })
-                .ToList();
+                .ToListAsync();
 
             return View(data);
         }
 
+
         public async Task<IActionResult> MonthlyBalance()
         {
+            var user = await _userManager.GetUserAsync(User);
+
             var data = await _context.Transactions
+                .Where(t => t.UserId == user.Id) 
                 .GroupBy(t => new { t.TransactionDateTime.Year, t.TransactionDateTime.Month })
                 .Select(g => new
                 {

@@ -6,13 +6,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-
 [Authorize]
 public class VisualizationsController : Controller
 {
     private readonly ISavingGoalService _savingGoalService;
     private readonly UserManager<ApplicationUser> _userManager;
     private readonly ApplicationDbContext _context;
+
     public VisualizationsController(ISavingGoalService savingGoalService, UserManager<ApplicationUser> userManager, ApplicationDbContext context)
     {
         _savingGoalService = savingGoalService;
@@ -51,11 +51,17 @@ public class VisualizationsController : Controller
         return View(yearlySavings);
     }
 
-
-    public IActionResult SpendingByCategoryChart(string month = "All", string year = "All")
+    public async Task<IActionResult> SpendingByCategoryChart(string month = "All", string year = "All")
     {
+        var userId = await GetUserIdAsync(); 
+        if (userId == null)
+        {
+            return RedirectToAction("Login", "Account"); 
+        }
+
         var transactions = _context.Transactions
             .Include(t => t.Category)
+            .Where(t => t.UserId == userId) 
             .AsQueryable();
 
         if (int.TryParse(month, out int monthNumber) && monthNumber >= 1 && monthNumber <= 12)
@@ -70,7 +76,7 @@ public class VisualizationsController : Controller
                 .Where(t => t.TransactionDateTime.Year == yearNumber);
         }
 
-        var data = transactions
+        var data = await transactions
             .Where(t => t.Amount < 0)
             .GroupBy(t => t.Category.Name)
             .Select(g => new
@@ -78,7 +84,7 @@ public class VisualizationsController : Controller
                 Category = g.Key,
                 Total = g.Sum(t => t.Amount)
             })
-            .ToList();
+            .ToListAsync();
 
         return View(data);
     }
@@ -115,5 +121,7 @@ public class VisualizationsController : Controller
 
         return View(monthlyBalances);
     }
-
 }
+
+
+

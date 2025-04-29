@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/finalProject.styles.css" asp-append-version="true" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
 </head>
 <body>
     <header>
@@ -56,9 +59,6 @@
                         </li>
                     </ul>
 
-                        </li>
-
-                    </ul>
                     @{
                         var user = await UserManager.GetUserAsync(User);
                     }
@@ -66,6 +66,12 @@
                     <ul class="navbar-nav">
                         @if (User.Identity.IsAuthenticated && user != null)
                         {
+                            @if (await UserManager.IsInRoleAsync(user, "Admin"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-danger fw-bold" asp-controller="Admin" asp-action="Index">Admin Panel</a>
+                                </li>
+                            }
                             <li class="nav-item">
                                 <a class="nav-link text-dark">Hello, @user.Name!</a>
                             </li>
@@ -101,6 +107,7 @@
             &copy; 2024 - finalProject
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
