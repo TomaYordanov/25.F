@@ -51,8 +51,18 @@ namespace FinScope.Services
                 double noise = 1 + (_random.NextDouble() - 0.5) * 0.1;
                 predicted *= noise;
 
-                forecast[lastDate.AddDays(i)] = Math.Round((decimal)predicted, 2);
+                // Check for invalid predicted values
+                if (double.IsNaN(predicted) || double.IsInfinity(predicted) || predicted > (double)decimal.MaxValue || predicted < (double)decimal.MinValue)
+                {
+                    forecast[lastDate.AddDays(i)] = 0; // or any safe fallback
+                }
+                else
+                {
+                    // Safely round and convert to decimal
+                    forecast[lastDate.AddDays(i)] = Math.Round((decimal)predicted, 2);
+                }
             }
+
 
             return forecast;
         }

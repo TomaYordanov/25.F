@@ -77,12 +77,35 @@ public class AdminController : Controller
         return View(model);
     }
 
+    [HttpPost]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> DeleteUser(string id)
     {
         var user = await _userManager.FindByIdAsync(id);
-        if (user == null) return NotFound();
+        if (user == null)
+        {
+            TempData["Error"] = "User not found.";
+            return RedirectToAction("Index");
+        }
+
+        var roles = await _userManager.GetRolesAsync(user);
+        if (roles.Contains("admin", StringComparer.OrdinalIgnoreCase))
+        {
+            TempData["Error"] = "You cannot delete an admin user.";
+            return RedirectToAction("Index");
+        }
 
         var result = await _userManager.DeleteAsync(user);
-        return RedirectToAction(nameof(Users));
+        if (result.Succeeded)
+        {
+            TempData["Success"] = "User deleted successfully.";
+        }
+        else
+        {
+            TempData["Error"] = "Error deleting user.";
+        }
+
+        return RedirectToAction("Index");
     }
+
 }

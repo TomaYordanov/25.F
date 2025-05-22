@@ -17,14 +17,23 @@
         <tbody>
             @foreach (var user in Model.Users)
             {
+                var roles = await UserManager.GetRolesAsync(user);
                 <tr>
                     <td>@user.Email</td>
                     <td>
-                        @string.Join(", ", await UserManager.GetRolesAsync(user))
+                        @string.Join(", ", roles)
                     </td>
                     <td>
-                        <a asp-action="EditUser" asp-route-id="@user.Id">Edit</a> |
-                        <a asp-action="DeleteUser" asp-route-id="@user.Id" onclick="return confirm('Are you sure?');">Delete</a>
+                        <a class="btn btn-primary" asp-action="EditUser" asp-route-id="@user.Id">Edit</a> |
+
+                        @if (!roles.Contains("admin", StringComparer.OrdinalIgnoreCase))
+                        {
+                            <form asp-action="DeleteUser" method="post" style="display:inline;">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="id" value="@user.Id" />
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?');">Delete</button>
+                            </form>
+                        }
                     </td>
                 </tr>
             }
@@ -48,4 +57,3 @@ else
 {
     <p>No users found.</p>
 }
-
